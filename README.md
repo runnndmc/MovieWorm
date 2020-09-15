@@ -160,12 +160,12 @@ src
 
 ## Post-MVP
 
-- _Create a Characters table_
-- _Have a review rating scale so the user can rate with a click of a star_
-- _Include clips from a movie_
-- _Import collage designs for the movie poster_
+- _Have a sort functionality to see the most recently watched_
+- _Have a search function to search for the movies you've watched_
 - _Filter by theme, rating, title, director_
-- _Have a Directors table_
+- _Have a review rating scale so the user can rate with a click of a star_\
+- _Create a Characters and/or Directors table_
+- _Include clips from a movie_
 
 ***
 
