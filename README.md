@@ -1,12 +1,7 @@
 # MovieWorm README <!-- omit in toc -->
 
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
-
 - [Overview](#overview)
 - [MVP](#mvp)
-  - [Goals](#goals)
   - [Libraries and Dependencies](#libraries-and-dependencies)
   - [Client (Front End)](#client-front-end)
     - [Wireframes](#wireframes)
@@ -71,18 +66,24 @@ src
       |__ HeaderTable.jsx 
       |__ MovieCard.jsx
       |__ Sort.jsx 
-      |__ SideBar.jsx
       |__ RatingBubbles.jsx 
+      |__ AddReview.jsx 
+      |__ AddMovie.jsx 
 |__ containers/
       |__ MainContainer.jsx
 |__ layouts/
       |__ Layout.jsx
+      |__ SideBar.jsx
+|__ services/
+      |__ Search.jsx
 |__ screens/
       |__ Home.jsx 
       |__ MovieCreate.jsx
       |__ MovieDetail.jsx
+      |__ ReviewCreate.jsx
+      |__ Register.jsx
+      |__ Login.jsx
       |__ RecentlyWatched.jsx
-      |__ ReviewForm.jsx
       
 
 ```
@@ -92,11 +93,13 @@ src
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo - it will direct the user Home._               |
+|  HeaderTable  | functional |   y   |   n   | _The header table will provide a number of movies, reviews and the highest rating._       |
+|   MovieCard    |   functional    |   y   |   y   | _Users will be able to see a preview of what movies have been watched  _      |
+| Sort | functional |   y   |   n   | _ Have the ability to sort through the movies that are posted and look for the most recently viewed._                 |
+|    RatingBubbles    | functional |   y   |   n   | _Have the user be able to click on how many starts they think the movie deserves._ |
+|    AddReview    | functional |   y   |   y   | _Give the user the ability to create a new review on a movie._ |
+|    AddMovie | functional |   y   |   y   | _Allow the user to post a new movie with all information they want and add their review along with it._ |
 
 #### Time Estimates
 
