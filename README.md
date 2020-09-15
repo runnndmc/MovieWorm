@@ -50,7 +50,7 @@ _**MovieWorm** is a movie journal app helping you to remember what movie's you'v
 #### Wireframes
 
 
-![MovieWorm Wireframe](https://whimsical.com/TUUUjNk77JVdvP9s5prHdG)
+[MovieWorm Wireframe](https://whimsical.com/TUUUjNk77JVdvP9s5prHdG)
 
 - All screens including mobile screens
 
@@ -67,8 +67,7 @@ src
       |__ MovieCard.jsx
       |__ Sort.jsx 
       |__ RatingBubbles.jsx 
-      |__ AddReview.jsx 
-      |__ AddMovie.jsx 
+      |__ CreateForm.jsx  
 |__ containers/
       |__ MainContainer.jsx
 |__ layouts/
@@ -98,8 +97,8 @@ src
 |   MovieCard    |   functional    |   y   |   y   | _Users will be able to see a preview of what movies have been watched  _      |
 | Sort | functional |   y   |   n   | _ Have the ability to sort through the movies that are posted and look for the most recently viewed._                 |
 |    RatingBubbles    | functional |   y   |   n   | _Have the user be able to click on how many starts they think the movie deserves._ |
-|    AddReview    | functional |   y   |   y   | _Give the user the ability to create a new review on a movie._ |
-|    AddMovie | functional |   y   |   y   | _Allow the user to post a new movie with all information they want and add their review along with it._ |
+|    CreateForm    | functional |   y   |   y   | _Give the user the ability to create a new review or a movie for the site._ |
+
 
 #### Time Estimates
 
@@ -107,9 +106,44 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Create backend models    |    H     |     1 hr      |      hrs     |    TBD    |
+| Create database |    H     |     3 hrs      |      hrs     |     TBD     |
+| Add Controllers    |    H     |     2 hrs      |      hrs     |    TBD    |
+| Set up routes |    H     |     1 hrs      |      hrs     |     TBD     |
+| Set up user auth    |    H     |     2 hrs      |      hrs     |    TBD    |
+| Create React App and file structure |    H     |     2 hrs      |      hrs     |     TBD     |
+| Set up App.js and all Screens react sturcture  |    H     |     2 hrs      |      hrs     |    TBD    |
+| Set up User Auth |    H     |     3 hrs      |      hrs     |     TBD     |
+| Finish Layout with Header component|    H     |     3 hrs      |      hrs     |     TBD     |
+| 1stDraft Style Layout screen |    H     |     3 hrs      |      hrs     |     TBD     |
+| Create Home screen |    H     |     3 hrs      |      hrs     |     TBD     |
+| 1stDraft Style Home screen |    H     |     2 hrs      |      hrs     |     TBD     |
+| Create GET api call |    H     |     1 hrs      |      hrs     |     TBD     |
+| Create MovieCard component |    H     |     3 hrs      |      hrs     |     TBD     |
+| 1stDraft Style MovieCard component |    H     |     2 hrs      |      hrs     |     TBD     |
+| Create CreateForm |    H     |     2 hrs      |      hrs     |     TBD     |
+| 1stDraft Style CreateForm |    H     |     3 hrs      |      hrs     |     TBD     |
+| Create Login/Register screens |    H     |     3 hrs      |      hrs     |     TBD     |
+| 1stDraft Style Login/Register screens |    H     |     3 hrs      |      hrs     |     TBD     |
+| Create MovieDetail screen |    H     |     3 hrs      |      hrs     |     TBD     |
+| 1stDraft Style MovieDetail screen |    H     |     2 hrs      |      hrs     |     TBD     |
+| Create PUT api call |    H     |     3 hrs      |      hrs     |     TBD     |
+| 1stDraft Style Edit Review inline |    H     |     2 hrs      |      hrs     |     TBD     |
+| Create DELETE api call |    H     |     3 hrs      |      hrs     |     TBD     |
+| Make sure it's functioning |    H     |     1 hrs      |      hrs     |     TBD     |
+| Create ReviewCreate screen |    H     |     3 hrs      |      hrs     |     TBD     |
+| 1stDraft Style ReviewCreate screen |    H     |     2 hrs      |      hrs     |     TBD     |
+| Create HeaderTable compomnent |    L     |     3 hrs      |      hrs     |     TBD     |
+| 1stDraft Style HeaderTable compomnent |    L     |     2 hrs      |      hrs     |     TBD     |
+| Create RatingBubbles compomnent |    L     |     2 hrs      |      hrs     |     TBD     |
+| 1stDraft Style RatingBubbles compomnent |    L     |     1 hrs      |      hrs     |     TBD     |
+| Create RatingBubbles compomnent |    L     |     2 hrs      |      hrs     |     TBD     |
+| 1stDraft Style RatingBubbles compomnent |    L     |     1 hrs      |      hrs     |     TBD     |
+| Create Sort fucntionality |    L     |     2 hrs      |      hrs     |     TBD     |
+| Create Search fucntionality |    L     |     2 hrs      |      hrs     |     TBD     |
+| Finalize CSS |    H     |     3 hrs      |      hrs     |     TBD     |
+| Fun CSS |    L     |     3 hrs      |      hrs     |     TBD     |
+| TOTAL               |          |     82 hrs      |      hrs     |     TBD     |
 
 <br>
 
