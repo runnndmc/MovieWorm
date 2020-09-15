@@ -121,29 +121,34 @@ src
 | Create GET api call |    H     |     1 hrs      |      hrs     |     TBD     |
 | Create MovieCard component |    H     |     3 hrs      |      hrs     |     TBD     |
 | 1stDraft Style MovieCard component |    H     |     2 hrs      |      hrs     |     TBD     |
+| Media Queries |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create CreateForm |    H     |     2 hrs      |      hrs     |     TBD     |
 | 1stDraft Style CreateForm |    H     |     3 hrs      |      hrs     |     TBD     |
 | Create Login/Register screens |    H     |     3 hrs      |      hrs     |     TBD     |
 | 1stDraft Style Login/Register screens |    H     |     3 hrs      |      hrs     |     TBD     |
+| Media Queries |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create MovieDetail screen |    H     |     3 hrs      |      hrs     |     TBD     |
 | 1stDraft Style MovieDetail screen |    H     |     2 hrs      |      hrs     |     TBD     |
 | Create PUT api call |    H     |     3 hrs      |      hrs     |     TBD     |
 | 1stDraft Style Edit Review inline |    H     |     2 hrs      |      hrs     |     TBD     |
 | Create DELETE api call |    H     |     3 hrs      |      hrs     |     TBD     |
 | Make sure it's functioning |    H     |     1 hrs      |      hrs     |     TBD     |
+| Media Queries |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create ReviewCreate screen |    H     |     3 hrs      |      hrs     |     TBD     |
 | 1stDraft Style ReviewCreate screen |    H     |     2 hrs      |      hrs     |     TBD     |
+| Media Queries |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create HeaderTable compomnent |    L     |     3 hrs      |      hrs     |     TBD     |
 | 1stDraft Style HeaderTable compomnent |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create RatingBubbles compomnent |    L     |     2 hrs      |      hrs     |     TBD     |
 | 1stDraft Style RatingBubbles compomnent |    L     |     1 hrs      |      hrs     |     TBD     |
 | Create RatingBubbles compomnent |    L     |     2 hrs      |      hrs     |     TBD     |
 | 1stDraft Style RatingBubbles compomnent |    L     |     1 hrs      |      hrs     |     TBD     |
+| Media Queries |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create Sort fucntionality |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create Search fucntionality |    L     |     2 hrs      |      hrs     |     TBD     |
-| Finalize CSS |    H     |     3 hrs      |      hrs     |     TBD     |
-| Fun CSS |    L     |     3 hrs      |      hrs     |     TBD     |
-| TOTAL               |          |     82 hrs      |      hrs     |     TBD     |
+| Finalize CSS |    H     |     4hrs      |      hrs     |     TBD     |
+| Media Queries |    L     |     3 hrs      |      hrs     |     TBD     |
+| TOTAL               |          |     95 hrs      |      hrs     |     TBD     |
 
 <br>
 
