@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  title: MyString
+  director: MyString
+  producer: MyString
+  writer: MyString
+  screenplay_by: MyString
+  year_released: 
+  genre: MyString
+  img_url: MyString
+
+two:
+  user_id: 
+  title: MyString
+  director: MyString
+  producer: MyString
+  writer: MyString
+  screenplay_by: MyString
+  year_released: 
+  genre: MyString
+  img_url: MyString

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie_id: 
+  user_id: 
+  summary: MyString
+  star_rating: 
+
+two:
+  movie_id: 
+  user_id: 
+  summary: MyString
+  star_rating: 
