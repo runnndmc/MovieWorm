@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    before_action :authorize_request, except: :create
 
   # POST /users
   def create
@@ -15,7 +16,7 @@ class UsersController < ApplicationController
     end
   end
 
-  
+
   private
 
     # Only allow a trusted parameter "white list" through.
