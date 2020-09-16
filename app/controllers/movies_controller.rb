@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-    before_action :set_movie, only: [:show, :update, :destroy]
+    before_action :set_movie, only: [ :update, :destroy]
     before_action :authorize_request, except: [:index, :show]
 
  # GET /movies
@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
 
   # GET /movies/1
   def show
-   # @movie = Movie.find(params[:id])
+    @movie = Movie.find(params[:id])
     render json: @movie, include: :reviews
   end
 
