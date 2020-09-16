@@ -1,23 +1,23 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_id: 
+  user: one
   title: MyString
   director: MyString
   producer: MyString
   writer: MyString
   screenplay_by: MyString
-  year_released: 
+  year_released: 1
   genre: MyString
   img_url: MyString
 
 two:
-  user_id: 
+  user: two
   title: MyString
   director: MyString
   producer: MyString
   writer: MyString
   screenplay_by: MyString
-  year_released: 
+  year_released: 1
   genre: MyString
   img_url: MyString
