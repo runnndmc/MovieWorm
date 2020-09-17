@@ -4,14 +4,15 @@ class MoviesController < ApplicationController
 
  # GET /movies
  def index
-    @movies = Movie.all
+    @user = User.find(params[:user_id])
+    @movies = Movie.where(user_id: @user.id)
     render json: @movies, include: :reviews, status: :ok
   end
 
   # GET /movies/1
   def show
     @movie = Movie.find(params[:id])
-    render json: @movie, include: :reviews
+    render json: @movie, include: :user
   end
 
   # POST /movies

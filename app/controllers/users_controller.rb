@@ -1,5 +1,19 @@
 class UsersController < ApplicationController
-    before_action :authorize_request, except: :create
+  before_action :set_user, only: [:show, :update, :destroy]
+
+
+  #GET /users
+  def index 
+    @users = User.all
+    render json: @users
+  end
+
+
+  #GET /users/1
+  def show 
+    render json: @user, include: :movies
+  end
+  
 
   # POST /users
   def create
@@ -17,9 +31,19 @@ class UsersController < ApplicationController
   end
 
 
+  #DELETE /users/1
+  def destroy 
+    @user.destroy
+  end
+
+
+
   private
 
-    # Only allow a trusted parameter "white list" through.
+    def set_user
+      @user = User.find(params[:id])
+    end
+
     def user_params
       params.require(:user).permit(:username, :email, :password)
     end
