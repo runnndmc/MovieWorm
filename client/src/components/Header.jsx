@@ -20,7 +20,7 @@ const Header = (props) => {
                     </div> :
                     <Link to='/login'>Login/Register</Link>
             }
-            <hr />
+            
             {currentUser &&
                 <>
                 <Link to='/movies'>Movies</Link>

@@ -1,12 +1,12 @@
 import api from './apiConfig'
 
 export const getAllMovies = async () => {
-    const resp = api.get('/movies')
+    const resp = await api.get('/movies')
     return resp.data
 }
 
 export const getOneMovie = async (id) => {
-    const resp = api.get(`/movies/${id}`)
+    const resp = await api.get(`/movies/${id}`)
     return resp.data
 }
 

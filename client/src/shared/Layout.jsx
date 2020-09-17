@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Header from '../components/Header'
 
 import './Layout.css'
@@ -6,15 +6,17 @@ import './Layout.css'
 const Layout = (props) => {
     const { currentUser, handleLogout } = props
     return(
+        <>
         <Header
-            currentUser = {currentUser}
-            handleLogout = {handleLogout}
-        >
+            currentUser={currentUser}
+            handleLogout={handleLogout}
+        />
             <main>
+                <h3> hello </h3>
                 {props.children}
             </main>
 
-        </Header>
+       </>
     )
 }
 

@@ -23,9 +23,11 @@ const MainContainer = (props) => {
             const reviewsArray = await getAllReviews()
             setReviews(reviewsArray)
         }
+        if (currentUser){
         fetchMovies()
         fetchReviews()
-    }, [])
+        }
+    }, [currentUser])
 
     const updateSubmit = async (id, formData) => {
         const updatedReview = await putReview(id, formData)

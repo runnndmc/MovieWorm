@@ -42,23 +42,23 @@ function App() {
 
   return (
     <Layout 
-      currentUser = {currentUser} 
-      handleLogout = {handleLogout}
+      currentUser={currentUser} 
+      handleLogout={handleLogout}
     >
-
+      <h3> hello </h3>
       <Switch>
-
         <Route path='/login'>
-          <LoginPage loginSubmit = {loginSubmit} />
+          <LoginPage loginSubmit={loginSubmit} />
         </Route>
 
         <Route path ='/register'>
-          <Register registerSubmit = {registerSubmit} />
+          <Register registerSubmit={registerSubmit} />
         </Route>
 
-        <Route path ='/' component={MainContainer}>
+        <Route path ='/'>
+          <MainContainer currentUser={currentUser} />
         </Route>
- 
+
       </Switch>
     </Layout>
    
