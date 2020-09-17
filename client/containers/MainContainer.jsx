@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react'
+import MovieCreate from '../src/Screens/MovieCreate';
+import { getAllMovies, postMovie } from '../src/services/movies';
 /* import { Route, Switch } from 'react-router-dom';
  */
 
-const MainContainer = () => {
+const MainContainer = (props) => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -11,11 +13,24 @@ const MainContainer = () => {
             setMovies(moviesArray)
         }
         fetchMovies()
-    })
+    }, [])
+
+    const createSubmit = async (formData) => {
+        const addMovie = await postMovie(formData)
+        setMovies(prevState => [...prevState, addMovie])
+        history.pushState('/movies')
+    }
+
+
+
+
+
     return(
-/*         <Switch>
-            <Route></Route>
-        </Switch> */
+         <Switch>
+            <Route path = '/movies/add'>
+                <MovieCreate createSubmit={createSubmit} />
+            </Route>
+        </Switch> 
     )
 }
 
