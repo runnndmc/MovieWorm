@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
 
 import './App.css';
-import Layout from './layouts/Layout'
+import Layout from './shared/Layout'
 import LoginPage from './screens/LoginPage'
 import Register from './screens/Register'
 import MainContainer from './containers/MainContainer'
@@ -17,7 +17,6 @@ function App() {
     const handleVerify = async () => {
       const userData = await verifyUser()
       setCurrentUser(userData)
-      history.push('/')
     }
     handleVerify()
   }, []) 
@@ -43,7 +42,7 @@ function App() {
 
   return (
     <Layout 
-      currentUser = {currentUser}
+      currentUser = {currentUser} 
       handleLogout = {handleLogout}
     >
 
@@ -58,6 +57,7 @@ function App() {
         </Route>
 
         <Route path ='/' component={MainContainer}>
+        </Route>
  
       </Switch>
     </Layout>

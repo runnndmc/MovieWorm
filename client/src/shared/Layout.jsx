@@ -1,12 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Header from '../components/Header'
+
 import './Layout.css'
 
-const Layout = () => {
-
+const Layout = (props) => {
+    const { currentUser, handleLogout } = props
     return(
-        <>
-            <h2>Layout</h2>
-        </>
+        <Header
+            currentUser = {currentUser}
+            handleLogout = {handleLogout}
+        >
+            <main>
+                {props.children}
+            </main>
+
+        </Header>
     )
 }
 
