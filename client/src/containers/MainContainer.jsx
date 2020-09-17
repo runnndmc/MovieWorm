@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react'
-import MovieCreate from '../src/Screens/MovieCreate';
-import { getAllMovies, postMovie } from '../src/services/movies';
-/* import { Route, Switch } from 'react-router-dom';
- */
+import { Route, Switch } from 'react-router-dom';
+import MovieCreate from '../screens/MovieCreate';
+import { getAllMovies, postMovie } from '../services/movies';
+
+ 
 
 const MainContainer = (props) => {
     const [movies, setMovies] = useState([]);
@@ -29,6 +30,9 @@ const MainContainer = (props) => {
          <Switch>
             <Route path = '/movies/add'>
                 <MovieCreate createSubmit={createSubmit} />
+            </Route>
+            <Route path='/movies'>
+                
             </Route>
         </Switch> 
     )
