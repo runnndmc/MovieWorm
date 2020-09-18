@@ -16,7 +16,7 @@ export const putMovie = async (id, formData) => {
 }
 
 export const postMovie = async (formData) => {
-    const resp = await api.post('/movies', {movies: formData})
+    const resp = await api.post('/movies', {movie: formData})
     return resp.data
 }
 

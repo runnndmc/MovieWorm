@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Layout from '../shared/Layout'
+
 const MovieCard = (props) => {
     const {movies, currentUser} = props
 

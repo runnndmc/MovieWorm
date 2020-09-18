@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-    before_action :set_movie, only: [ :update, :destroy]
+    before_action :set_movie, only: [:update, :destroy]
     before_action :authorize_request, except: [:show]
 
  # GET /movies
@@ -44,8 +44,7 @@ class MoviesController < ApplicationController
       @movie = @current_user.movies.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def movie_params
-      params.require(:movie).permit(:name)
+      params.require(:movie).permit(:name, :title, :director, :producer, :writer, :screenplay_by, :year_released, :genre, :img_url)
     end
 end
