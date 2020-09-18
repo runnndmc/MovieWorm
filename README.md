@@ -106,11 +106,11 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create backend models    |    H     |     1 hr      |      hrs     |    TBD    |
-| Create database |    H     |     3 hrs      |      hrs     |     TBD     |
-| Add Controllers    |    H     |     2 hrs      |      hrs     |    TBD    |
-| Set up routes |    H     |     1 hrs      |      hrs     |     TBD     |
-| Set up user auth    |    H     |     2 hrs      |      hrs     |    TBD    |
+| Create backend models    |    H     |     1 hr      |   1   hrs     |   3     |
+| Create database |    H     |     3 hrs      |     3 hrs     |     1     |
+| Add Controllers    |    H     |     2 hrs      |   2   hrs     |    1    |
+| Set up routes |    H     |     1 hrs      |   1   hrs     |     1     |
+| Set up user auth    |    H     |     2 hrs      |   2   hrs     |    1    |
 | Create React App and file structure |    H     |     2 hrs      |      hrs     |     TBD     |
 | Set up App.js and all Screens react sturcture  |    H     |     2 hrs      |      hrs     |    TBD    |
 | Set up User Auth |    H     |     3 hrs      |      hrs     |     TBD     |
