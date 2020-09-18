@@ -10,8 +10,11 @@ const Header = (props) => {
     return (
 
         <header className='header'>
-            <h1 className='app-name'>MovieWorm</h1>
-            <h4>for those devoted</h4>
+            <div className='logo-tag'>
+                <h1>MovieWorm</h1>
+               
+                <h4 className='tag'>for those devoted</h4>
+            </div>
             {
                 currentUser ?
                     <div> 

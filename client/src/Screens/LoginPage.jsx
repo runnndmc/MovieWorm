@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import './LoginPage.css'
+
 const LoginPage = (props) => {
     const [formData, setFormData] = useState({
         username: '', 
         password: ''
     })
-    const { username, password } = formData
+    const {username, password} = formData
 
     const handleChange = (e) => {
-        const { name, value } = e.target
+        const {name, value} = e.target
         setFormData(prevState => ({
             ...prevState, 
             [name]: value
@@ -17,7 +19,9 @@ const LoginPage = (props) => {
     }
 
     return(
-        <form onSubmit={(e)=> {
+        <form 
+            className='login-form'
+            onSubmit={(e)=> {
             e.preventDefault()
             props.loginSubmit(formData)
         }}>

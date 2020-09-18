@@ -6,3 +6,13 @@ header{
 .app-name{
     margin-top: 0;
 }
+
+.logo-tag{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.tag{
+    margin-left: 20px;
+}
