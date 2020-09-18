@@ -9,7 +9,7 @@ const Header = (props) => {
 
     return (
 
-        <header>
+        <header className='header'>
             <h1 className='app-name'>MovieWorm</h1>
             <h4>for those devoted</h4>
             {
@@ -20,7 +20,7 @@ const Header = (props) => {
                     </div> :
                     <Link to='/login'>Login/Register</Link>
             }
-            
+            <hr />
             {currentUser &&
                 <>
                 <Link to='/movies'>Movies</Link>

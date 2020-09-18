@@ -28,8 +28,8 @@ function App() {
   }
 
   const registerSubmit = async (registerData) => {
-    const userRegData = await registerUser(registerData)
-    setCurrentUser(userRegData)
+    const userData = await registerUser(registerData)
+    setCurrentUser(userData)
     history.push('/')
   }
 
@@ -45,7 +45,7 @@ function App() {
       currentUser={currentUser} 
       handleLogout={handleLogout}
     >
-      <h3> hello </h3>
+  
       <Switch>
         <Route path='/login'>
           <LoginPage loginSubmit={loginSubmit} />
@@ -58,7 +58,6 @@ function App() {
         <Route path ='/'>
           <MainContainer currentUser={currentUser} />
         </Route>
-
       </Switch>
     </Layout>
    

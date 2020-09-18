@@ -1,13 +1,11 @@
 class ReviewsController < ApplicationController
+before_action :authorize_request 
+ 
 
- #GET /reviews
+#GET /reviews
   def index
-      @user = User.find(params[:user_id])
-      @reviews = Review.where(user_id: @user.id)
-      
-      render json: @reviews
+      render json: @current_user.reviews
   end
-
 
 
 end

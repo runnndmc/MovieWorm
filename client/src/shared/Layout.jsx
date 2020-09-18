@@ -6,17 +6,16 @@ import './Layout.css'
 const Layout = (props) => {
     const { currentUser, handleLogout } = props
     return(
-        <>
+        <div className='body-container'>
         <Header
             currentUser={currentUser}
             handleLogout={handleLogout}
         />
             <main>
-                <h3> hello </h3>
                 {props.children}
             </main>
 
-       </>
+       </div>
     )
 }
 

@@ -1,12 +1,10 @@
 class MoviesController < ApplicationController
     before_action :set_movie, only: [ :update, :destroy]
-    before_action :authorize_request, except: [:index, :show]
+    before_action :authorize_request, except: [:show]
 
  # GET /movies
  def index
-    @user = User.find(params[:user_id])
-    @movies = Movie.where(user_id: @user.id)
-    render json: @movies, include: :reviews, status: :ok
+    render json: @current_user.movies, include: :reviews, status: :ok
   end
 
   # GET /movies/1

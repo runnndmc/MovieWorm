@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
   
-  resources :users, only: :create do
-    resources :movies
-      resources :reviews 
-  end
+  resources :users, only: :create
+  resources :movies
+  resources :reviews 
+  
 end

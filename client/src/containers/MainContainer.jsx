@@ -9,8 +9,9 @@ import { putReview, getAllReviews} from '../services/reviews';
  
 
 const MainContainer = (props) => {
-    const [movies, setMovies] = useState([]);
+    const [movies, setMovies] = useState([])
     const [reviews, setReviews] = useState([])
+    
     const history = useHistory()
     const { currentUser } = props
 
