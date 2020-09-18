@@ -3,8 +3,8 @@ import { Route, Switch, useHistory } from "react-router-dom";
 import MovieCreate from "../screens/MovieCreate";
 import MovieDetail from "../components/MovieCard";
 import AllMovies from "../screens/AllMovies";
-import ReviewEdit from "../screens/ReviewEdit";
-import { deleteMovie, getAllMovies, postMovie } from "../services/movies";
+import MovieEdit from "../screens/MovieEdit";
+import { deleteMovie, getAllMovies, postMovie, putMovie } from "../services/movies";
 import { putReview, getAllReviews } from "../services/reviews";
 
 const MainContainer = (props) => {
@@ -30,13 +30,13 @@ const MainContainer = (props) => {
   }, [currentUser]);
 
   const updateSubmit = async (id, formData) => {
-    const updatedReview = await putReview(id, formData);
-    setReviews((prevState) =>
-      prevState.map((review) =>
-        review.id === Number(id) ? updatedReview : review
+    const updatedMovie = await putMovie(id, formData);
+    setMovies((prevState) =>
+      prevState.map((movie) =>
+        movie.id === Number(id) ? updatedMovie : movie
       )
     );
-    history.push("/");
+    history.push("/movies");
   };
 
   const createSubmit = async (formData) => {
@@ -57,9 +57,9 @@ const MainContainer = (props) => {
         <MovieCreate createSubmit={createSubmit} />
       </Route>
 
-      <Route path="/reviews/:id/edit">
-        <ReviewEdit 
-            reviews={reviews}
+      <Route path="/movies/:id/edit">
+        <MovieEdit 
+            movies={movies}
             handleDelete={handleDelete} 
             updateSubmit={updateSubmit} 
         />

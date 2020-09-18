@@ -27,6 +27,7 @@ const MovieCard = (props) => {
             <h4>Genre</h4>
             <h2>{movie.genre}</h2>
         </Link>
+        <Link to={`/movies/${movie.id}/edit`}>EDIT ME</Link>
     </div>
     )}
   });

@@ -11,7 +11,9 @@ const AllMovies = (props) => {
                 movies={movies}
                 currentUser={currentUser}
             />
+            
             <Link to='/movies/add'>Add New Movie</Link>
+
         </>
     )
 }

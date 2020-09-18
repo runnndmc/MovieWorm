@@ -95,6 +95,7 @@ const MovieCreate = (props) => {
             onChange={handleChange}
         />
         <button>Submit</button>
+        
     </form>
   );
 };
