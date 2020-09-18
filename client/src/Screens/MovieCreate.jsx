@@ -25,8 +25,11 @@ const MovieCreate = (props) => {
   const { createSubmit } = props;
 
   const handleChange = (e) => {
-      const {value} = e.target
-      setFormData({name:value})
+      const {value, name} = e.target
+      setFormData(prevState => ({
+          ...prevState,
+          [name]:value
+      }))
   }
 
   return (
@@ -37,48 +40,56 @@ const MovieCreate = (props) => {
         <h2>Create You're Movie</h2>
         <label>Title:</label>
         <input
+            name='title'
             type='text'
             value={title}
             onChange={handleChange}
         />
         <label>Director:</label>
         <input
+            name='director'
             type='text'
             value={director}
             onChange={handleChange}
         />
         <label>Producer:</label>
         <input
+            name='producer'
             type='text'
             value={producer}
             onChange={handleChange}
         />
         <label>Writer:</label>
         <input 
+            name='writer'
             type='text'
             value={writer}
             onChange={handleChange}
         />
         <label>Screenplay By:</label>
         <input 
+            name='screenplay_by'
             type='text'
             value={screenplay_by}
             onChange={handleChange}
         />
         <label>Year Released:</label>
-        <input 
+        <input
+            name='year_released'
             type='number'
             value={year_released}
             onChange={handleChange}
         />
         <label>Genre:</label>
         <input
-            type=''
+            name='genre'
+            type='text'
             value={genre}
             onChange={handleChange}
         />
         <label>Movie Image URL</label>
         <input
+            name='img_url'
             type='text'
             value={img_url}
             onChange={handleChange}
