@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { getOneMovie } from '../services/movies'
 
 const MovieDetail = (props) => {
@@ -25,6 +25,8 @@ useEffect (() => {
                     <h2>{movie.title}</h2>
                 </>
             }
+            <Link to={`/movies/${id}/edit`}><button>Edit</button></Link>
+            <button onClick={() => handleDelete(movie.id)}>Delete</button>
         </div>
     )
 }
