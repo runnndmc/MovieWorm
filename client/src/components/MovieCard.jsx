@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Layout from '../shared/Layout'
 import './MovieCard.css'
 
 const MovieCard = (props) => {
@@ -28,8 +27,6 @@ const MovieCard = (props) => {
             <h4>Genre</h4>
             <h2>{movie.genre}</h2>
         </Link>
-        <Link to={`/movies/${movie.id}/edit`}>EDIT ME</Link>
-        <button onClick={() => handleDelete(movies.id)}>Delete</button>
     </div>
     )}
   });
