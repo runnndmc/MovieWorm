@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { getOneMovie } from '../services/movies'
 import { addReview } from '../services/reviews'
+import ReviewCreate from './ReviewCreate'
 
 const MovieDetail = (props) => {
 const {reviews, handleDelete, updateSubmit} = props
 
-console.log(reviews[0])
+console.log(reviews)
 
 const [movie, setMovie] = useState(null)
 const [reviewId, setReviewId] = useState('')
@@ -44,12 +45,9 @@ const handleClick = async () => {
                     ))}
                 </>
             }
-            <p>{reviews.summary}</p>
-            {/* {reviews.map(review => (
-
-            ))} */}
             <Link to={`/movies/${id}/edit`}><button>Edit</button></Link>
             <button onClick={() => handleDelete(id)}>Delete</button>
+            <Link to={`/movies/${id}/reviews/add`}><button>Add Review</button></Link>
         </div>
     )
 }

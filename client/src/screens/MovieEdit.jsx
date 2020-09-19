@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { getOneMovie, putMovie } from '../services/movies';
+import { getOneMovie } from '../services/movies';
 
 const MovieEdit = (props) => {
     const [formData, setFormData] = useState({

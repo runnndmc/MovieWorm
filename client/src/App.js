@@ -7,7 +7,7 @@ import LoginPage from './screens/LoginPage'
 import Register from './screens/Register'
 import MainContainer from './containers/MainContainer'
 import {loginUser, registerUser, removeToken, verifyUser} from './services/auth'
-
+import ReviewContainer from './containers/ReviewContainer'
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
@@ -57,6 +57,10 @@ function App() {
 
         <Route path ='/'>
           <MainContainer currentUser={currentUser} />
+        </Route>
+
+        <Route path ='/'>
+          <ReviewContainer currentUser={currentUser} />
         </Route>
       </Switch>
     </Layout>
