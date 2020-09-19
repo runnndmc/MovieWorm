@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Layout from '../shared/Layout'
+import './MovieCard.css'
 
 const MovieCard = (props) => {
-    const {movies, currentUser} = props
+    const {movies, currentUser, handleDelete} = props
 
   const cards = movies.map((movie) => {
     if (currentUser && currentUser.id === movie.user_id){
@@ -28,6 +29,7 @@ const MovieCard = (props) => {
             <h2>{movie.genre}</h2>
         </Link>
         <Link to={`/movies/${movie.id}/edit`}>EDIT ME</Link>
+        <button onClick={() => handleDelete(movies.id)}>Delete</button>
     </div>
     )}
   });

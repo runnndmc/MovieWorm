@@ -9,7 +9,7 @@ const Header = (props) => {
 
     return (
 
-        <header className='header'>
+        <header>
             <div className='logo-tag'>
                 <h1>MovieWorm</h1>
                
@@ -17,17 +17,22 @@ const Header = (props) => {
             </div>
             {
                 currentUser ?
-                    <div> 
+                    <div className='log-in-fo'> 
                         <p>{currentUser.username}</p>
                         <button onClick={handleLogout}>Log Out</button>
                     </div> :
+                    <div className='log-in-fo'>
                     <Link to='/login'>Login/Register</Link>
+                    </div>
             }
-            <hr />
+            
+            <div className='find-your-movies'>
             {currentUser &&
                 <>
                 <Link to='/movies'>Movies</Link>
-                </>}
+                </>
+            }
+            </div>
         </header>
     )
 }

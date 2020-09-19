@@ -73,6 +73,7 @@ const MainContainer = (props) => {
         <AllMovies
           movies={movies}
           currentUser={currentUser}
+          handleDelete={handleDelete} 
         />
       </Route>
 
