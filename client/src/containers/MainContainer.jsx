@@ -55,7 +55,8 @@ const MainContainer = (props) => {
 
   const handleDelete = async (id) => {
     await deleteMovie(id);
-    setMovies((prevState) => prevState.filter((movie) => movie.id !== id));
+    setMovies((prevState) => prevState.filter((movie) => movie.id !== Number(id)));
+    history.push("/movies")
   };
   /*======================================================================================*/
 

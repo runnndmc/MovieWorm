@@ -4,7 +4,6 @@ import { getOneMovie, putMovie } from '../services/movies';
 
 const MovieEdit = (props) => {
     const [formData, setFormData] = useState({
-        name: '',
         title: '',
         director: "",
         producer: "",
@@ -26,22 +25,48 @@ const MovieEdit = (props) => {
         img_url,
       } = formData;
 
+      console.log()
+
+
       let {id} = useParams()
       const {movies, updateSubmit, handleDelete} = props
 
       useEffect(()=> {
         const prefillForm = async () => {
             const findOne = await getOneMovie(id)
-            setFormData({name: findOne})
+            const {
+                title,
+                director,
+                producer,
+                writer,
+                screenplay_by,
+                year_released,
+                genre,
+                img_url,
+              } = findOne;
+            setFormData({
+                title,
+                director,
+                producer,
+                writer,
+                screenplay_by,
+                year_released,
+                genre,
+                img_url,
+              })
             } 
             prefillForm()
         }, [])
 
 
-      const handleChange = (e) => {
-        const {value} = e.target
-        setFormData({ name: value})
-      }
+        const handleChange = (e) => {
+            const {value, name} = e.target
+            setFormData(prevState => ({
+                ...prevState,
+                [name]:value
+            }))
+        }
+      
 
     return (
         <form onSubmit={(e) => {

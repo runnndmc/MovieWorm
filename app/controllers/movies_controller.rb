@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
-    before_action :set_movie, only: [:update, :destroy]
     before_action :authorize_request, except: [:show]
+    before_action :set_movie, only: [:update, :destroy]
+    
 
  # GET /movies
  def index
@@ -27,8 +28,9 @@ class MoviesController < ApplicationController
 
   # PATCH/PUT /movies/1
   def update
+    puts movie_params
     if @movie.update(movie_params)
-      render json: @movie
+      render json: @movie #, notice: 'Updated!'
     else
       render json: @movie.errors, status: :unprocessable_entity
     end
@@ -41,10 +43,10 @@ class MoviesController < ApplicationController
 
   private
     def set_movie
-      @movie = @current_user.movies.find(params[:id])
+      @movie=@current_user.movies.find(params[:id])
     end
 
     def movie_params
-      params.require(:movie).permit(:name, :title, :director, :producer, :writer, :screenplay_by, :year_released, :genre, :img_url)
+      params.require(:movie).permit(:title, :director, :producer, :writer, :screenplay_by, :year_released, :genre, :img_url)
     end
 end
