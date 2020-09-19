@@ -10,7 +10,7 @@ import { putReview, getAllReviews } from "../services/reviews";
 
 
 const MainContainer = (props) => {
-  const { currentUser } = props;
+  const {currentUser} = props;
 
   const [movies, setMovies] = useState([]);
   const [reviews, setReviews] = useState([]);
@@ -23,13 +23,13 @@ const MainContainer = (props) => {
       const moviesArray = await getAllMovies();
       setMovies(moviesArray);
     };
-/*     const fetchReviews = async () => {
+    const fetchReviews = async () => {
       const reviewsArray = await getAllReviews();
       setReviews(reviewsArray);
-    }; */
+    };
     if (currentUser) {
       fetchMovies();
-     /*  fetchReviews(); */
+      fetchReviews();
     }
   }, [currentUser]);
 
