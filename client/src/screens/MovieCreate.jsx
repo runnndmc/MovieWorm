@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import StarRating from "../components/StarRating";
+import { FaStar } from 'react-icons/fa'
 
 const MovieCreate = (props) => {
   const [formData, setFormData] = useState({
@@ -23,6 +25,32 @@ const MovieCreate = (props) => {
   } = formData;
 
   const { createSubmit } = props;
+  const [rating, setRating] = useState(null)
+  const [hover, setHover] = useState(null)
+
+
+const starRate=[...Array(5)].map((star, i) => {
+              const ratingValue = i + 1
+              return ( 
+              <label>
+                  <input 
+                      type='radio' 
+                      name='rating'
+                      value={ratingValue}
+                      onClick={() => setRating(ratingValue)}
+                      
+                  />
+                  <FaStar 
+                      className='star' 
+                      color={ratingValue <= (hover || rating) ? 'green' : 'gray'} 
+                      size={50}
+                      onMouseEnter={()=>setHover(ratingValue)}
+                      onMouseLeave={()=>setHover(null)}
+                  />
+              </label>
+              )
+          })
+
 
   const handleChange = (e) => {
       const {value, name} = e.target
@@ -94,6 +122,7 @@ const MovieCreate = (props) => {
             value={img_url}
             onChange={handleChange}
         />
+        {starRate}
         <button>Submit</button>
         
     </form>
