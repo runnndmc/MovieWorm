@@ -13,19 +13,19 @@ const MovieCard = (props) => {
         <Link classname='card' to={`/movies/${movie.id}`}>
             <img className='movie-card-image' src={movie.img_url} alt={movie.title} />
             <h4>Title:</h4>
-            <h2 className='break'>{movie.title}</h2>
+            <h3 className='break'>{movie.title}</h3>
             <h4>Directed By:</h4>
-            <h2>{movie.director}</h2>
+            <h3>{movie.director}</h3>
             <h4>Produced By:</h4>
-            <h2>{movie.producer}</h2>
+            <h3>{movie.producer}</h3>
             <h4>Written By:</h4>
-            <h2>{movie.writer}</h2>
+            <h3>{movie.writer}</h3>
             <h4>Screenplay By:</h4>
-            <h2>{movie.screenplay_by}</h2>
+            <h3>{movie.screenplay_by}</h3>
             <h4>Year Released</h4>
-            <h2>{movie.year_released}</h2>
+            <h3>{movie.year_released}</h3>
             <h4>Genre</h4>
-            <h2>{movie.genre}</h2>
+            <h3>{movie.genre}</h3>
         </Link>
     </div>
     )}
