@@ -9,11 +9,11 @@ const MovieCard = (props) => {
   const cards = movies.map((movie) => {
     if (currentUser && currentUser.id === movie.user_id){
     return(
-    <div key={movie.id}>
-        <Link to={`/movies/${movie.id}`}>
-            <img src={movie.img_url} alt={movie.title} />
+    <div className='movie-card'key={movie.id}>
+        <Link classname='card' to={`/movies/${movie.id}`}>
+            <img className='movie-card-image' src={movie.img_url} alt={movie.title} />
             <h4>Title:</h4>
-            <h2>{movie.title}</h2>
+            <h2 className='break'>{movie.title}</h2>
             <h4>Directed By:</h4>
             <h2>{movie.director}</h2>
             <h4>Produced By:</h4>

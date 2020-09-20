@@ -1,0 +1,19 @@
+body{
+    background-color: darkred;
+}
+.movie-card{
+    background-color: darkmagenta;
+    width:40vw;
+    padding: 0 20px;
+    display:flex;
+    flex-direction: row;
+   
+    
+}
+
+.movie-card-image{
+    width: 30vw;
+}
+.break{
+    word-break: break-all;
+}

@@ -34,6 +34,10 @@
 .find-your-movies{
     background-color: cyan;
     display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 13px ;
+    
     grid-column-start: 5;
     grid-row-end: span 5;
     

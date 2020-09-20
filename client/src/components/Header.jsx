@@ -11,7 +11,7 @@ const Header = (props) => {
 
         <header>
             <div className='logo-tag'>
-                <h1>MovieWorm</h1>
+                <Link to='/'><h1>MovieWorm</h1></Link>
                
                 <h4 className='tag'>for those devoted</h4>
             </div>
@@ -26,7 +26,7 @@ const Header = (props) => {
                     </div>
             }
             
-            <div className='find-your-movies'>
+            <div className='all-movies'>
             {currentUser &&
                 <>
                 <Link to='/movies'>Movies</Link>
