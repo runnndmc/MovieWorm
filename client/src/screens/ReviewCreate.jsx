@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import { FaStar } from 'react-icons/fa'
 const ReviewCreate = (props) => {
 const [reviewForm, setReviewForm] = useState({
     summary: "", 
@@ -11,6 +11,9 @@ const {
 } = reviewForm
 
 const {createSubmit} = props
+const [rating, setRating] = useState(null)
+const [hover, setHover] = useState(null)
+
 
 const handleChange = (e) => {
     const {value, name} = e.target
@@ -19,6 +22,32 @@ const handleChange = (e) => {
         [name]:value
     }))
 }
+
+const starRate=[...Array(5)].map((star, i) => {
+              const ratingValue = i + 1
+              return ( 
+              <label>
+                  <input 
+                      type='radio' 
+                      name='rating'
+                      value={ratingValue}
+                      onClick={() => setRating(ratingValue)}
+                      onChange={handleChange}
+                  />
+                  <FaStar 
+                      className='star' 
+                      color={ratingValue <= (hover || rating) ? 'green' : 'gray'} 
+                      size={50}
+                      onMouseEnter={()=>setHover(ratingValue)}
+                      onMouseLeave={()=>setHover(null)}
+                  />
+              </label>
+              )
+          })
+
+
+
+
     return(
         <form onSubmit={(e) => {
             e.preventDefault()
@@ -33,7 +62,7 @@ const handleChange = (e) => {
                 rows='3'
                 onChange={handleChange}
             ></textarea>
-            <label>Star Rating</label>
+            {starRate}
             <input 
                 name='star_rating'
                 value={star_rating}

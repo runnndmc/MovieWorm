@@ -1,55 +1,31 @@
 import React, { useState } from "react";
 import StarRating from "../components/StarRating";
-import { FaStar } from 'react-icons/fa'
+
+import ReviewCreate from "./ReviewCreate";
 
 const MovieCreate = (props) => {
-  const [formData, setFormData] = useState({
-    title: "",
-    director: "",
-    producer: "",
-    writer: "",
-    screenplay_by: "",
-    year_released: "",
-    genre: "",
-    img_url: "",
-  });
-  const {
-    title,
-    director,
-    producer,
-    writer,
-    screenplay_by,
-    year_released,
-    genre,
-    img_url,
-  } = formData;
+    const {createSubmit} = props;
+    const [formData, setFormData] = useState({
+        title: "",
+        director: "",
+        producer: "",
+        writer: "",
+        screenplay_by: "",
+        year_released: "",
+        genre: "",
+        img_url: "",
+    });
+    const {
+        title,
+        director,
+        producer,
+        writer,
+        screenplay_by,
+        year_released,
+        genre,
+        img_url,
+    } = formData;
 
-  const { createSubmit } = props;
-  const [rating, setRating] = useState(null)
-  const [hover, setHover] = useState(null)
-
-
-const starRate=[...Array(5)].map((star, i) => {
-              const ratingValue = i + 1
-              return ( 
-              <label>
-                  <input 
-                      type='radio' 
-                      name='rating'
-                      value={ratingValue}
-                      onClick={() => setRating(ratingValue)}
-                      
-                  />
-                  <FaStar 
-                      className='star' 
-                      color={ratingValue <= (hover || rating) ? 'green' : 'gray'} 
-                      size={50}
-                      onMouseEnter={()=>setHover(ratingValue)}
-                      onMouseLeave={()=>setHover(null)}
-                  />
-              </label>
-              )
-          })
 
 
   const handleChange = (e) => {
@@ -122,7 +98,7 @@ const starRate=[...Array(5)].map((star, i) => {
             value={img_url}
             onChange={handleChange}
         />
-        {starRate}
+        <ReviewCreate />
         <button>Submit</button>
         
     </form>
