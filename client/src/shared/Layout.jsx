@@ -1,28 +1,24 @@
-import React from 'react'
-import Header from '../components/Header'
+import React from "react";
+import Header from "../components/Header";
 
-import './Layout.css'
+import "./Layout.css";
 
 const Layout = (props) => {
-    const { currentUser, handleLogout } = props
-    return(
-        <>
-        <div className='body-container'>
-        <Header
-            currentUser={currentUser}
-            handleLogout={handleLogout}
-        />
-        
-        
-            <main>
-                <div className='find-your-movies'>
-                {props.children}
-                </div>
-            </main>
-            </div>
-      
-       </>
-    )
-}
+  const { currentUser, handleLogout } = props;
+  return (
+    <div className="body-container">
+      <Header currentUser={currentUser} handleLogout={handleLogout} />
 
-export default Layout
+      <aside className="right-side">
+        <h3>All Movies</h3>
+      </aside>
+
+      <main>{props.children}</main>
+      <footer>
+        <h2>Dayna Marie</h2>
+      </footer>
+    </div>
+  );
+};
+
+export default Layout;

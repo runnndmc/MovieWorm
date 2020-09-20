@@ -1,15 +1,11 @@
-body{
-    background-color: darkred;
-}
-.movie-card{
+
+/* .movie-card{
     background-color: darkmagenta;
     width:40vw;
     padding: 0 20px;
     display:flex;
-    flex-direction: row;
-   
-    
-}
+    flex-direction: row;    
+} */
 
 .movie-card-image{
     width: 30vw;
