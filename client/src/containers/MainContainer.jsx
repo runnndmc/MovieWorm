@@ -4,6 +4,7 @@ import MovieCreate from "../screens/MovieCreate";
 import MovieDetail from "../screens/MovieDetail";
 import AllMovies from "../screens/AllMovies";
 import MovieEdit from "../screens/MovieEdit";
+
 import { deleteMovie, getAllMovies, postMovie, putMovie } from "../services/movies";
 import { postReview, getAllReviews } from "../services/reviews";
 
@@ -33,7 +34,7 @@ const MainContainer = (props) => {
     }
   }, [currentUser]);
 
-  
+
   const createReviewSubmit = async (reviewData) => {
     const addReview = await postReview(reviewData)
     setReviews((prevState) => [...prevState, addReview])
@@ -51,10 +52,6 @@ const MainContainer = (props) => {
     history.push("/movies");
   };
 
-
-
-/*=======================================================================================*/
-
   const updateSubmit = async (id, formData) => {
     const updatedMovie = await putMovie(id, formData);
     setMovies((prevState) =>
@@ -65,14 +62,11 @@ const MainContainer = (props) => {
     history.push("/movies");
   };
 
-
-
   const handleDelete = async (id) => {
     await deleteMovie(id);
     setMovies((prevState) => prevState.filter((movie) => movie.id !== Number(id)));
     history.push("/movies")
   };
-  /*======================================================================================*/
 
   return (
     <Switch>

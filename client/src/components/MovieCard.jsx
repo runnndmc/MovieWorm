@@ -10,7 +10,7 @@ const MovieCard = (props) => {
     if (currentUser && currentUser.id === movie.user_id){
     return(
     <div className='movie-card'key={movie.id}>
-        <Link classname='card' to={`/movies/${movie.id}`}>
+        <Link className='card' to={`/movies/${movie.id}`}>
             <h4>Title:</h4>
             <h3 className='break'>{movie.title}</h3>
             <h4>Directed By:</h4>

@@ -17,14 +17,8 @@ useEffect (() => {
     fetchMovie()
 }, [])
 
-const matchAndShowReview = reviews.map(review => {
-    console.log(review.movie_id === Number(id))
+const matchAndShowReview = reviews.map(review => review.movie_id === Number(id) ? review.summary : '')
 
-    if (review.movie_id === Number(id)){
-
-        console.log(review.summary)
-        return review.summary
-}})
 
 /* 
 const handleChange = (e) => {

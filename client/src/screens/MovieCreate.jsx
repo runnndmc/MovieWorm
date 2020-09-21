@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaStar } from 'react-icons/fa'
 
-/* import ReviewCreate from "./ReviewCreate"; */
 
 const MovieCreate = (props) => {
     const {createSubmit, createReviewSubmit} = props; /*from MainContainer with createReviewSubmit>postReview() and fetchReviews>getAllReviews()*/
