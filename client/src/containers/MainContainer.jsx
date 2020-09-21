@@ -43,10 +43,10 @@ const MainContainer = (props) => {
 
   const createSubmit = async (formData, reviewData) => {
     const addMovie = await postMovie(formData);
-    console.log(addMovie)
+
     let movie_id = addMovie.id
     const obj = {...reviewData, movie_id}
-    console.log(obj)
+
     createReviewSubmit(obj)
     setMovies((prevState) => [...prevState, addMovie]);
     history.push("/movies");

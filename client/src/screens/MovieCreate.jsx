@@ -23,9 +23,8 @@ const MovieCreate = (props) => {
         year_released,
         genre,
         img_url,
-    } = formData;
+    }=formData;
 
-    const [hover, setHover] = useState(null)
     const [reviewForm, setReviewForm] = useState({
         summary: "", 
         star_rating: "",
@@ -33,7 +32,11 @@ const MovieCreate = (props) => {
     const {
         summary, 
         star_rating,
-    } = reviewForm
+    }=reviewForm
+
+
+    const [hover, setHover] = useState(null)
+
 
     const handleChange = (e) => {
         const {value, name} = e.target
@@ -42,7 +45,6 @@ const MovieCreate = (props) => {
             [name]:value
         }))
     }
-
 
   const handleReviewChange=(e)=>{
       const {value, name} = e.target
