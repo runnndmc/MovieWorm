@@ -79,11 +79,12 @@ const MovieCreate = (props) => {
 
 
   return (
-    <form className='create-movie-form'
+    <form
         onSubmit={(e) => {
         e.preventDefault()
         createSubmit(formData, reviewForm)
     }}>
+        <div className='create-movie-form'>
         <h2>Create You're Movie</h2>
         <label>Title:</label>
         <input
@@ -141,6 +142,8 @@ const MovieCreate = (props) => {
             value={img_url}
             onChange={handleChange}
         />
+        </div>
+        <div className="creave-review-form">
         <h2>Create You're Review</h2>
         {starRate}
         
@@ -153,7 +156,7 @@ const MovieCreate = (props) => {
                 onChange={handleReviewChange}
             ></textarea>
         <button>Submit</button>
-        
+        </div>
     </form>
   );
 };
