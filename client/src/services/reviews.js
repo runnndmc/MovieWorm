@@ -1,23 +1,26 @@
 import api from './apiConfig'
 
-
+const baseUrl = 'http://localhost3000/movies'
 
 export const getAllReviews = async () => {
-    const resp = await api.get('/reviews')
+    const resp = await api.get(`/reviews`)
     return resp.data
 }
 
-export const putReview = async (id, formData) => {
-    const resp = await api.put(`/reviews/${id}`, {review: formData})
+export const getOneReview = async (movieId) => {
+    const resp = await api.get(`/movies/${movieId}/reviews`)
     return resp.data
 }
 
-export const postReview = async (formData) => {
-    const resp = await api.post(`/reviews`, {review: formData})
+
+export const postReview = async (reviewData) => {
+    const resp = await api.post(`/reviews`, {review: reviewData})
     return resp.data
 }
+
 
 export const deleteReview = async(id) => {
     const resp = await api.delete(`/reviews/${id}`)
     return resp.data
-}
+}                                                                                
+ 

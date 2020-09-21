@@ -1,0 +1,18 @@
+
+.movie-card{
+    background-color: darkmagenta;
+    width:40vw;
+    padding: 0 20px;
+    display:flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px;   
+}
+
+.movie-card-image{
+    width: 30vw;
+}
+.break{
+    word-break: break-all;
+}

@@ -9,11 +9,13 @@ export const getOneMovie = async (id) => {
     const resp = await api.get(`/movies/${id}`)
     return resp.data
 }
+/*======================================================================================*/
 
 export const putMovie = async (id, formData) => {
     const resp = await api.put(`/movies/${id}`, {movie: formData})
     return resp.data
 }
+/*======================================================================================*/
 
 export const postMovie = async (formData) => {
     const resp = await api.post('/movies', {movie: formData})

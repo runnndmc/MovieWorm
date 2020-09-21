@@ -1,0 +1,18 @@
+
+.create-movie-form{
+    background-color: maroon;
+    display: flex;
+    flex-direction:column;
+}
+
+
+.creave-review-form{
+    display: flex;
+}
+.star-rating{
+    background-color: lightslategray;
+
+}
+.radio-buttons{
+    display:none;
+}

@@ -8,7 +8,6 @@ import Register from './screens/Register'
 import MainContainer from './containers/MainContainer'
 import {loginUser, registerUser, removeToken, verifyUser} from './services/auth'
 
-
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
   const history = useHistory()
@@ -58,6 +57,7 @@ function App() {
         <Route path ='/'>
           <MainContainer currentUser={currentUser} />
         </Route>
+        
       </Switch>
     </Layout>
    
