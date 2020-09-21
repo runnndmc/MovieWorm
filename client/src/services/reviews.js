@@ -19,7 +19,6 @@ export const postReview = async (reviewData) => {
 }
 
 
-
 export const deleteReview = async(id) => {
     const resp = await api.delete(`/reviews/${id}`)
     return resp.data

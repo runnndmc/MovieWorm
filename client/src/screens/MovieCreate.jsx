@@ -148,10 +148,6 @@ const MovieCreate = (props) => {
                 rows='3'
                 onChange={handleReviewChange}
             ></textarea>
-       {/*  <ReviewCreate 
-            setFormData={setFormData}
-            createReviewSubmit={createReviewSubmit}
-            handleReviewChange={handleReviewChange}/> */}
         <button>Submit</button>
         
     </form>

@@ -5,10 +5,8 @@ import { postReview, getOneReview } from '../services/reviews'
 
 const MovieDetail = (props) => {
 const {reviews, handleDelete, updateSubmit} = props
-console.log(reviews)
 const [movie, setMovie] = useState(null)
 const [review, setReview] = useState('')
-
 const {id} = useParams()
 
 useEffect (() => {
@@ -16,12 +14,18 @@ useEffect (() => {
         const singleMovie=await getOneMovie(id)
         setMovie(singleMovie)
     }
-    const fetchReview=async (id) =>{
-        const singleReview=await getOneReview(id)
-        setReview(singleReview)
-    }
     fetchMovie()
 }, [])
+
+const matchAndShowReview = reviews.map(review => {
+    console.log(review.movie_id === Number(id))
+
+    if (review.movie_id === Number(id)){
+
+        console.log(review.summary)
+        return review.summary
+}})
+
 /* 
 const handleChange = (e) => {
     const {value} = e.target
@@ -42,12 +46,7 @@ const handleClick = async () => {
                     <h2>{movie.title}</h2>
                 </>
             }
-            {
-                review &&
-                <> 
-                    <p>{review.summary}</p>
-                </>
-            }
+            {matchAndShowReview}
             <Link to={`/movies/${id}/edit`}><button>Edit</button></Link>
             <button onClick={() => handleDelete(id)}>Delete</button>
             <Link to={`/movies/${id}/reviews/add`}><button>Add Review</button></Link>
