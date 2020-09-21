@@ -18,7 +18,6 @@ class MoviesController < ApplicationController
   def create
     @movie = Movie.new(movie_params)
     @movie.user = @current_user
-
     if @movie.save
       render json: @movie, status: :created
     else
@@ -28,9 +27,8 @@ class MoviesController < ApplicationController
 
   # PATCH/PUT /movies/1
   def update
-    puts movie_params
     if @movie.update(movie_params)
-      render json: @movie #, notice: 'Updated!'
+      render json: @movie
     else
       render json: @movie.errors, status: :unprocessable_entity
     end
