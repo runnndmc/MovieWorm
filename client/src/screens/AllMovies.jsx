@@ -9,11 +9,6 @@ const AllMovies = (props) => {
     const {currentUser, movies, handleDelete} = props
     const [searchMovies, setSearchedMovies] = useState([])
     
-    const favGenre = movies.filter(movie => {
-        if (movie.genre === 'Comedy'){
-            console.log (movie.genre.length)
-        } 
-    })
 
     const handleSearch = (e) => {
         const findMovie = movies.filter(movie => movie.title.toLowerCase().includes(e.target.value.toLowerCase()))
@@ -29,7 +24,6 @@ const AllMovies = (props) => {
 
     return (
         <>
-            <Link to='/movies/add'>Add New Movie</Link>
             <Search onSubmit={handleSubmit} onChange={handleSearch} />
             <h2> all the users movies </h2>
             <h3>You Have Watched and Reviewed {movies.length} movies</h3>

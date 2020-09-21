@@ -43,9 +43,3 @@
     
 }
 
-.all-movies{
-    background-color: lawngreen;  
-    grid-column-start: 5;
-    grid-row-start: 1;
-    grid-row-end: 5;                                         ;
-}
