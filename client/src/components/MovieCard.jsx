@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import './MovieCard.css'
 
 const MovieCard = (props) => {
-    const {movies, currentUser, handleDelete} = props
+    const {movies, currentUser, handleDelete, reviews} = props
 
   const cards = movies.map((movie) => {
     if (currentUser && currentUser.id === movie.user_id){
@@ -30,6 +30,8 @@ const MovieCard = (props) => {
     </div>
     )}
   });
+
+
 
   return (
     <>

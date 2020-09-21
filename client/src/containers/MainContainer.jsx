@@ -97,6 +97,7 @@ const MainContainer = (props) => {
 
       <Route path="/movies">
         <AllMovies
+          reviews={reviews}
           movies={movies}
           currentUser={currentUser}
           handleDelete={handleDelete}

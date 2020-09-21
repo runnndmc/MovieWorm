@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaStar } from 'react-icons/fa'
-
+import './MovieCreate.css'
 
 const MovieCreate = (props) => {
     const {createSubmit, createReviewSubmit} = props; /*from MainContainer with createReviewSubmit>postReview() and fetchReviews>getAllReviews()*/
@@ -55,8 +55,9 @@ const MovieCreate = (props) => {
   const starRate=[...Array(5)].map((star, i) => {
     const ratingValue = i + 1
     return ( 
-    <label>
+    <label className='star-rating'>
         <input 
+            className='radio-buttons'
             type='radio' 
             name='star_rating'
             value={ratingValue}
@@ -76,9 +77,10 @@ const MovieCreate = (props) => {
 
 
   return (
-    <form onSubmit={(e) => {
+    <form className='create-movie-form'
+        onSubmit={(e) => {
         e.preventDefault()
-         createSubmit(formData, reviewForm)
+        createSubmit(formData, reviewForm)
     }}>
         <h2>Create You're Movie</h2>
         <label>Title:</label>
@@ -137,8 +139,9 @@ const MovieCreate = (props) => {
             value={img_url}
             onChange={handleChange}
         />
-        {starRate}
         <h2>Create You're Review</h2>
+        {starRate}
+        
             <label>Review</label>
             <textarea
                 name='summary'

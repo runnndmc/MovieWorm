@@ -6,7 +6,7 @@ import Movie from '../components/Movie';
 import '../shared/Layout.css'
 
 const AllMovies = (props) => {
-    const {currentUser, movies, handleDelete} = props
+    const {currentUser, movies, handleDelete, reviews} = props
     const [searchMovies, setSearchedMovies] = useState([])
     
 
@@ -25,10 +25,10 @@ const AllMovies = (props) => {
     return (
         <>
             <Search onSubmit={handleSubmit} onChange={handleSearch} />
-            <h2> all the users movies </h2>
-            <h3>You Have Watched and Reviewed {movies.length} movies</h3>
+            <h3>Total Movies: {movies.length}</h3>
             {moviesFound}
             <MovieCard 
+                reviews={reviews}
                 movies={movies}
                 currentUser={currentUser}
                 handleDelete={handleDelete}
