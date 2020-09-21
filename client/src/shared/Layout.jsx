@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import Header from "../components/Header";
 
 import "./Layout.css";
@@ -12,6 +13,13 @@ const Layout = (props) => {
       <aside className="right-side">
         <h3>All Movies</h3>
       </aside>
+      <div className='all-movies'>
+            {currentUser &&
+                <>
+                <Link to='/movies'>Movies</Link>
+                </>
+            }
+          </div>
 
       <main>{props.children}</main>
       <footer>

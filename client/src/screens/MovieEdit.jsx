@@ -130,7 +130,7 @@ const MovieEdit = (props) => {
             value={img_url}
             onChange={handleChange}
         />
-        <button>Edit</button>
+        <button>Save</button>
        
         </form>
     )

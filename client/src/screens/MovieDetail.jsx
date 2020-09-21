@@ -1,36 +1,37 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { getOneMovie } from '../services/movies'
-import { addReview } from '../services/reviews'
-import ReviewCreate from './ReviewCreate'
+import { postReview, getOneReview } from '../services/reviews'
 
 const MovieDetail = (props) => {
 const {reviews, handleDelete, updateSubmit} = props
-
 console.log(reviews)
-
 const [movie, setMovie] = useState(null)
-const [reviewId, setReviewId] = useState('')
+const [review, setReview] = useState('')
 
 const {id} = useParams()
 
 useEffect (() => {
     const fetchMovie = async () => {
-        const singleMovie = await getOneMovie(id)
+        const singleMovie=await getOneMovie(id)
         setMovie(singleMovie)
+    }
+    const fetchReview=async (id) =>{
+        const singleReview=await getOneReview(id)
+        setReview(singleReview)
     }
     fetchMovie()
 }, [])
-
+/* 
 const handleChange = (e) => {
     const {value} = e.target
     setReviewId(value)
 }
 
 const handleClick = async () => {
-    const fullMovieDetail = await addReview(id, reviewId)
+    const fullMovieDetail = await postReview(id, reviewId)
     setMovie(fullMovieDetail)
-}
+} */
 
     return(
         <div>
@@ -39,10 +40,12 @@ const handleClick = async () => {
                 <>
                     <img src={movie.img_url} height='500px' alt={movie.name}/>
                     <h2>{movie.title}</h2>
-                    
-                    {reviews.map(review => (
-                        <p>{review.summary}</p>
-                    ))}
+                </>
+            }
+            {
+                review &&
+                <> 
+                    <p>{review.summary}</p>
                 </>
             }
             <Link to={`/movies/${id}/edit`}><button>Edit</button></Link>

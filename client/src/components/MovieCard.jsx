@@ -11,11 +11,11 @@ const MovieCard = (props) => {
     return(
     <div className='movie-card'key={movie.id}>
         <Link classname='card' to={`/movies/${movie.id}`}>
-            <img className='movie-card-image' src={movie.img_url} alt={movie.title} />
             <h4>Title:</h4>
             <h3 className='break'>{movie.title}</h3>
             <h4>Directed By:</h4>
             <h3>{movie.director}</h3>
+            <img className='movie-card-image' src={movie.img_url} alt={movie.title} />
             <h4>Produced By:</h4>
             <h3>{movie.producer}</h3>
             <h4>Written By:</h4>

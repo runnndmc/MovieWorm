@@ -59,9 +59,9 @@ function App() {
           <MainContainer currentUser={currentUser} />
         </Route>
 
-        <Route path ='/'>
+       {/*  <Route path ='/'>
           <ReviewContainer currentUser={currentUser} />
-        </Route>
+        </Route> */}
       </Switch>
     </Layout>
    

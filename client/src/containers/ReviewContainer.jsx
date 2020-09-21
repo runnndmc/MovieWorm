@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { useHistory, useParams, Switch, Route } from 'react-router-dom';
+/* import React, { useEffect, useState } from 'react'
+import { useParams, Switch, Route } from 'react-router-dom';
 import { deleteReview, getAllReviews, postReview, putReview } from '../services/reviews';
 import ReviewCreate from '../screens/ReviewCreate'
 
 const ReviewContainer = (props) => {
 const {currentUser} = props
-
 const [reviews, setReviews] = useState([]);
 
-const history = useHistory()
 const {id} = useParams()
 
 useEffect(() => {
@@ -21,13 +19,12 @@ useEffect(() => {
     }
 }, [currentUser])
 
-const createReviewSubmit = async (formData) => {
-    const addReview = await postReview(formData)
-    setReviews((prevState) => [...prevState, addReview])
-    history.push(`/movies/${id}`)
-}
+/* =================================================================*/
 
-/* const updateSubmit = async (id, formData) => {
+/* 
+=================================================================*
+
+const updateSubmit = async (id, formData) => {
     const updatedReview = await putReview(id, formData)
     setReviews((prevState) => 
         prevState.map((review) => 
@@ -39,7 +36,7 @@ const handleDelete = async (id) => {
     await deleteReview(id)
     setReviews((prevState) => prevState.filter((review) => review.id !== Number(id)))
     history.push(`/movies/${id}`)
-} */
+}
     return(
         <Switch>
             <Route path={`/movies/${id}/reviews/add`}>
@@ -50,4 +47,4 @@ const handleDelete = async (id) => {
     )
 }
 
-export default ReviewContainer
+export default ReviewContainer */

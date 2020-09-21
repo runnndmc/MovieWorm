@@ -5,7 +5,7 @@ import MovieDetail from "../screens/MovieDetail";
 import AllMovies from "../screens/AllMovies";
 import MovieEdit from "../screens/MovieEdit";
 import { deleteMovie, getAllMovies, postMovie, putMovie } from "../services/movies";
-import { putReview, getAllReviews } from "../services/reviews";
+import { postReview, getAllReviews } from "../services/reviews";
 
 
 
@@ -39,6 +39,12 @@ const MainContainer = (props) => {
     history.push("/movies");
   };
 
+  const createReviewSubmit = async (reviewData) => {
+    const addReview = await postReview(reviewData)
+    setReviews((prevState) => [...prevState, addReview])
+    history.push('/movies')
+}
+
 /*=======================================================================================*/
 
   const updateSubmit = async (id, formData) => {
@@ -64,7 +70,10 @@ const MainContainer = (props) => {
     <Switch>
 
       <Route path="/movies/add">
-        <MovieCreate createSubmit={createSubmit} />
+        <MovieCreate 
+          createSubmit={createSubmit} 
+          createReviewSubmit={createReviewSubmit}
+        />
       </Route>
 
       <Route path="/movies/:id/edit">
@@ -88,7 +97,7 @@ const MainContainer = (props) => {
         <AllMovies
           movies={movies}
           currentUser={currentUser}
-          handleDelete={handleDelete} 
+          handleDelete={handleDelete}
         />
       </Route>
 

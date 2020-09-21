@@ -1,4 +1,4 @@
-/*  header{
+ header{
     display: grid;
     box-sizing: border-box;
     grid-column-start: 1;
@@ -28,7 +28,7 @@
     justify-content: space-around;
     height: 50px;
     align-items: baseline;
-    
+    margin-top: 100px;
 }
 
 .find-your-movies{
@@ -43,6 +43,9 @@
     
 }
 
-.login-register{
-
-} */
+.all-movies{
+    background-color: lawngreen;  
+    grid-column-start: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;                                         ;
+}

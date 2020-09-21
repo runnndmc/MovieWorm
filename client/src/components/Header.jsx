@@ -26,13 +26,13 @@ const Header = (props) => {
                     </div>
             }
             
-            <div className='all-movies'>
+            {/* <div className='all-movies'>
             {currentUser &&
                 <>
                 <Link to='/movies'>Movies</Link>
                 </>
             }
-            </div>
+            </div> */}
         </header>
     )
 }

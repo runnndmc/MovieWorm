@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import StarRating from "../components/StarRating";
+import { FaStar } from 'react-icons/fa'
 
-import ReviewCreate from "./ReviewCreate";
+/* import ReviewCreate from "./ReviewCreate"; */
 
 const MovieCreate = (props) => {
-    const {createSubmit} = props;
+    const {createSubmit, createReviewSubmit} = props; /*from MainContainer with createReviewSubmit>postReview() and fetchReviews>getAllReviews()*/
     const [formData, setFormData] = useState({
         title: "",
         director: "",
@@ -26,20 +26,60 @@ const MovieCreate = (props) => {
         img_url,
     } = formData;
 
+    const [hover, setHover] = useState(null)
+    const [reviewForm, setReviewForm] = useState({
+        summary: "", 
+        star_rating: ""
+    })
+    const {
+        summary, 
+        star_rating
+    } = reviewForm
 
+    const handleChange = (e) => {
+        const {value, name} = e.target
+        setFormData(prevState => ({
+            ...prevState,
+            [name]:value
+        }))
+    }
 
-  const handleChange = (e) => {
+  const handleReviewChange=(e)=>{
       const {value, name} = e.target
-      setFormData(prevState => ({
+      setReviewForm(prevState=> ({
           ...prevState,
           [name]:value
       }))
   }
 
+  const starRate=[...Array(5)].map((star, i) => {
+    const ratingValue = i + 1
+    return ( 
+    <label>
+        <input 
+            type='radio' 
+            name='star_rating'
+            value={ratingValue}
+            onClick={()=>setReviewForm(ratingValue)}
+            onChange={handleReviewChange}
+        />
+        <FaStar 
+            className='star' 
+            color={ratingValue <= (hover ||star_rating) ? 'green' : 'gray'} 
+            size={50}
+            onMouseEnter={()=>setHover(ratingValue)}
+            onMouseLeave={()=>setHover(null)}
+        />
+    </label>
+    )
+})
+
+
   return (
     <form onSubmit={(e) => {
         e.preventDefault()
         createSubmit(formData)
+        createReviewSubmit(reviewForm)
     }}>
         <h2>Create You're Movie</h2>
         <label>Title:</label>
@@ -98,7 +138,20 @@ const MovieCreate = (props) => {
             value={img_url}
             onChange={handleChange}
         />
-        <ReviewCreate />
+        {starRate}
+        <h2>Create You're Review</h2>
+            <label>Review</label>
+            <textarea
+                name='summary'
+                value={summary}
+                cols='10'
+                rows='3'
+                onChange={handleReviewChange}
+            ></textarea>
+       {/*  <ReviewCreate 
+            setFormData={setFormData}
+            createReviewSubmit={createReviewSubmit}
+            handleReviewChange={handleReviewChange}/> */}
         <button>Submit</button>
         
     </form>
