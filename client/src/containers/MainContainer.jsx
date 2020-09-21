@@ -33,17 +33,24 @@ const MainContainer = (props) => {
     }
   }, [currentUser]);
 
-  const createSubmit = async (formData) => {
-    const addMovie = await postMovie(formData);
-    setMovies((prevState) => [...prevState, addMovie]);
-    history.push("/movies");
-  };
-
   const createReviewSubmit = async (reviewData) => {
     const addReview = await postReview(reviewData)
     setReviews((prevState) => [...prevState, addReview])
     history.push('/movies')
 }
+
+  const createSubmit = async (formData, reviewData) => {
+    const addMovie = await postMovie(formData);
+    console.log(addMovie)
+    let movie_id = addMovie.id
+    const obj = {...reviewData, movie_id}
+    console.log(obj)
+    createReviewSubmit(obj)
+    setMovies((prevState) => [...prevState, addMovie]);
+    history.push("/movies");
+  };
+
+
 
 /*=======================================================================================*/
 

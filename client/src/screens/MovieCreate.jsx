@@ -29,11 +29,11 @@ const MovieCreate = (props) => {
     const [hover, setHover] = useState(null)
     const [reviewForm, setReviewForm] = useState({
         summary: "", 
-        star_rating: ""
+        star_rating: "",
     })
     const {
         summary, 
-        star_rating
+        star_rating,
     } = reviewForm
 
     const handleChange = (e) => {
@@ -43,6 +43,7 @@ const MovieCreate = (props) => {
             [name]:value
         }))
     }
+
 
   const handleReviewChange=(e)=>{
       const {value, name} = e.target
@@ -78,8 +79,7 @@ const MovieCreate = (props) => {
   return (
     <form onSubmit={(e) => {
         e.preventDefault()
-        createSubmit(formData)
-        createReviewSubmit(reviewForm)
+         createSubmit(formData, reviewForm)
     }}>
         <h2>Create You're Movie</h2>
         <label>Title:</label>
