@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FaStar } from 'react-icons/fa'
 import { useParams, Link } from 'react-router-dom'
 import { getOneMovie } from '../services/movies'
-import { postReview, getOneReview } from '../services/reviews'
+import './MovieDetail.css'
 
 const MovieDetail = (props) => {
 const {reviews, handleDelete, updateSubmit} = props
@@ -50,19 +50,23 @@ const handleClick = async () => {
             {
                 movie &&
                 <>
-                    <h3>{movie.genre}</h3>
-                    <h3>{movie.year_released}</h3>
+                    <div className='movie-top-info'>
+                        <h3>{movie.genre}</h3>
+                        <h3>{movie.year_released}</h3>
+                    </div>
                     <img className='detail-poster' src={movie.img_url} height='500px' alt={movie.name}/>
-                    <h2>{movie.title}</h2>
-                    <br></br>
-                    <h5>Director:</h5>
-                    <h3>{movie.director}</h3>
-                    <h5>Producer:</h5>
-                    <h3>{movie.producer}</h3>
-                    <h5>Writer:</h5>
-                    <h3>{movie.writer}</h3>
-                    <h5>Screenplay By:</h5>
-                    <h3>{movie.screenplay_by}</h3>
+                    <div className='movie-details'>    
+                        <h2>{movie.title}</h2>
+                        <br></br>
+                        <h5>Director:</h5>
+                        <h3>{movie.director}</h3>
+                        <h5>Producer:</h5>
+                        <h3>{movie.producer}</h3>
+                        <h5>Writer:</h5>
+                        <h3>{movie.writer}</h3>
+                        <h5>Screenplay By:</h5>
+                        <h3>{movie.screenplay_by}</h3>
+                    </div>
                 </>
             }
             {matchAndShowReview}

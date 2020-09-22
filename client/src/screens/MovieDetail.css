@@ -1,0 +1,9 @@
+.movie-top-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie-details{
+    background-color: midnightblue;
+    display: flex;
+}
