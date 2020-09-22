@@ -19,32 +19,38 @@ const LoginPage = (props) => {
     }
 
     return(
+        <>
+  
         <form 
             className='login-form'
             onSubmit={(e)=> {
             e.preventDefault()
             props.loginSubmit(formData)
         }}>
-            <h2>Login</h2>
-            <label>Username:
+            <h2 className='login-title'>Login</h2>
+            <label>Username:</label>
                 <input 
                     type='text'
                     name='username'
                     value={username}
                     onChange={handleChange}
                 />
-            </label>
-            <label>Password:
+            
+            <label>Password:</label>
                 <input 
                     type='password'
                     name='password'
                     value={password}
                     onChange={handleChange}
                 />
-            </label>
-            <Link to='/register'>Register</Link>
-            <button>Submit</button>
+            <div className='login-submit'>
+                <button className='login-submit-button'>Submit</button>
+            </div>
         </form>
+        <div className='reg'>
+        <Link to='/register'><button className='re-route-register'>Register</button></Link>
+        </div>
+        </>
     )
 }
 

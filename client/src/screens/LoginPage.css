@@ -1,0 +1,70 @@
+.login-title{
+    text-align:center;
+}
+.login-form{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: pink;
+}
+.login-form input{
+    padding: 7px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 70%;
+    margin-left: 80px;
+}
+.login-form label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    float: left;
+    font-weight: 600;
+    margin-left: 80px;
+}
+.login-submit{
+    display: flex;
+    justify-content: center;
+}
+.login-submit button{
+        width: 200px;
+        padding: 0.5em 3em;
+        border: 0.1em solid black;
+        margin: 25px;
+        box-sizing: border-box;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #0c0c0c;
+        text-align: center;
+        transition: all 0.15s;
+        color: black;
+}
+.login-submit-button:hover{
+    color:#DDDDDD;
+    border-color:#DDDDDD;
+}
+.reg{
+    display: flex;
+    justify-content: center;
+}
+.re-route-register{
+    margin-top: 50px;
+    align: center;
+    width: 200px;
+    padding: 0.5em 3em;
+    border: 0.1em solid black;
+    margin: 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #0c0c0c;
+    text-align: center;
+    transition: all 0.15s;
+    color: black;
+}
+.re-route-register:hover{
+    color:#DDDDDD;
+    border-color:#DDDDDD;
+}
