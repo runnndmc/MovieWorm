@@ -40,15 +40,12 @@ header{
 }
 
 .find-your-movies{
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 13px ;
     
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 13px;
     grid-column-start: 5;
     grid-row-end: span 5;
-    
 }
 .log-out{
     width: 100px;

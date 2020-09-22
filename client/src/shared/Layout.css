@@ -42,7 +42,7 @@ header{
     font-weight: 700;
 }
 .add-new-movie{
-    background-color: #1B4332;
+    background-color: #1e503be7;
     grid-column-start: 4;
     grid-row-start: 1;
     grid-row-end: 5;
