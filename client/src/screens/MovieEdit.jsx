@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+
 import { getOneMovie } from '../services/movies';
+import './MovieEdit.css'
 
 const MovieEdit = (props) => {
     const [formData, setFormData] = useState({
@@ -29,7 +31,7 @@ const MovieEdit = (props) => {
 
 
       let {id} = useParams()
-      const {movies, updateSubmit, handleDelete} = props
+      const { updateSubmit } = props
 
       useEffect(()=> {
         const prefillForm = async () => {
@@ -69,11 +71,13 @@ const MovieEdit = (props) => {
       
 
     return (
-        <form onSubmit={(e) => {
+        <form 
+            className='edit-form'
+            onSubmit={(e) => {
             e.preventDefault() 
             updateSubmit(id, formData)
         }}>
-            <h2>Edit Movie</h2>
+            <h2 className='edit-title'>Edit Your Mistakes</h2>
             <label>Title:</label>
         <input
             name='title'
@@ -130,7 +134,9 @@ const MovieEdit = (props) => {
             value={img_url}
             onChange={handleChange}
         />
-        <button>Save</button>
+        <div className='save-button-container'>
+            <button className='hit-save'>Save</button>
+        </div>
        
         </form>
     )

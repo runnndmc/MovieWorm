@@ -29,22 +29,6 @@ const matchAndShowReview = reviews.map(review => {
     } 
 })
 
-/* const stars=[...Array(5)].map((star, i) => {
-    const ratingValue = i +1
-    return(
-        
-    ) */
-/* 
-const handleChange = (e) => {
-    const {value} = e.target
-    setReviewId(value)
-}
-
-const handleClick = async () => {
-    const fullMovieDetail = await postReview(id, reviewId)
-    setMovie(fullMovieDetail)
-} */
-
     return(
         <div>
             {
