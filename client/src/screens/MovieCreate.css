@@ -15,7 +15,7 @@
     border-radius: 4px;
     box-sizing: border-box;
 }
-.create-movie-form label {
+.create-movie-form label{
     padding: 12px 12px 12px 0;
     display: inline-block;
     float: left;
