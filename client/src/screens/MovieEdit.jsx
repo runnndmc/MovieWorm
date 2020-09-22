@@ -5,6 +5,9 @@ import { getOneMovie } from '../services/movies';
 import './MovieEdit.css'
 
 const MovieEdit = (props) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     const [formData, setFormData] = useState({
         title: '',
         director: "",

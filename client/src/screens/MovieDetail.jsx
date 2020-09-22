@@ -11,6 +11,7 @@ const [movie, setMovie] = useState(null)
 const {id} = useParams()
 
 useEffect (() => {
+    window.scrollTo(0, 0);
     const fetchMovie = async () => {
         const singleMovie=await getOneMovie(id)
         setMovie(singleMovie)
