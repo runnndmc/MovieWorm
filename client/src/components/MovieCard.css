@@ -1,7 +1,7 @@
 
 .movie-card{
     background-color: darkmagenta;
-    width:50vw;
+    width:40vw;
     padding: 0 30px;
     display:flex;
     flex-direction: row; 
@@ -18,19 +18,36 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    border-bottom: 2px solid black;
+    height: 37px;
+    align-items: center;
+}
+.movie-value{
+    font-size: 30px;
 }
 .movie-card-image{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
     width: 80%;
-
+}
+.movie-value-genre{
+    border: none;
+    font-size: 30px;
 }
 .break{
+    margin-top: 5px;
     word-break: break-all;
+    font-size: 35px;
 }
 .card-container{
     display: flex;
     flex-flow: column wrap;
     align-content: center;
+}
+.genre-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 37px;
+    align-items: center;
 }
