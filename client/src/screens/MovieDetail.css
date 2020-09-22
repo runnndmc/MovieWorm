@@ -2,8 +2,25 @@
     display: flex;
     justify-content: space-between;
 }
-
+.year{
+    word-break: break-all;
+    line-height: 1;
+    width: 1em;
+}
+.detail-poster{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.detail-title{
+    margin-left: 30px;
+}
 .movie-details{
-    background-color: midnightblue;
     display: flex;
+    border-bottom:2px solid black;
+    height: 37px;
+    justify-content: space-between;
+    width: 60vw;
+    align-items: baseline center;
+    margin-left: 30px;
 }
