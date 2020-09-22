@@ -71,3 +71,15 @@ footer{
     grid-column-end: 6;
     background-color: deepskyblue;
 }
+
+@media all and (max-width: 699px) and (min-width: 520px) {
+    main{
+    background-color: black;
+    }
+    .add-movie-main{
+        margin-right: 10px;
+    }
+    .show-all-movies{
+        margin-left: 10px;
+    }
+}
