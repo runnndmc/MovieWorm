@@ -1,8 +1,10 @@
-
+body{
+    background-color: #C1BDB3;
+}
 .body-container{
     width: 100vw;
     height: 100vh;
-    background-color:whitesmoke;
+    background-color: #C1BDB3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr .5fr .5fr;
     grid-template-rows: 150px 1fr 1fr 1fr 1fr;
@@ -65,7 +67,7 @@ main{
     background-color: #C1BDB3;
 }
 footer{
-    grid-row-start: 4;
+    grid-row-start: 5;
     grid-column-start: 1;
     grid-column-end: 6;
     background-color: #C1BDB3;
