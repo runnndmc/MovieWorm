@@ -28,9 +28,12 @@ const AllMovies = (props) => {
     return (
         <>
             <Search onSubmit={handleSubmit} onChange={handleSearch} />
-            <h3>Total Movies: {movies.length}</h3>
             <div className='search-res'>
                 {moviesFound}
+            </div>
+            <div className='total-table'>
+                <h5 className='totals'>Total Movies:</h5>
+                <h2>{movies.length}</h2>
             </div>
             <MovieCard 
                 reviews={reviews}
