@@ -15,10 +15,12 @@
     justify-content: flex-start;
     align-items: baseline;
 }
+.logo{
+    margin-left: 10px;
+}
 
 .tag{
     margin-left: 20px;
-
 }
 
 .log-in-fo{

@@ -4,11 +4,11 @@
     height: 100vh;
     background-color: rgb(208, 204, 211);
     display: grid;
-    grid-template-columns: 1fr 1fr 30px;
+    grid-template-columns: 1fr 1fr 1fr .5fr .5fr;
     grid-template-rows: 150px 1fr 1fr 1fr;
-    grid-gap: 1em;
+    grid-gap: .5em;
 
-    padding: 5px;
+    padding: 2px;
     box-sizing: border-box;
 }
 header{
@@ -32,11 +32,22 @@ header{
     grid-row-start: 1;
     grid-row-end: 5;                                         ;
 }
+.show-all-movies{
+    text-decoration: none;
+    position: sticky;
+    top:0;
+}
 .add-new-movie{
     background-color: lightpink;
     grid-column-start: 4;
     grid-row-start: 1;
     grid-row-end: 5;
+}
+.add-movie-main{
+    text-decoration: none;
+    position: sticky;
+    top:0;
+
 }
 main{
     grid-row-start: 2;
@@ -47,5 +58,7 @@ main{
 }
 footer{
     grid-row-start: 4;
+    grid-column-start: 1;
+    grid-column-end: 6;
     background-color: deepskyblue;
 }

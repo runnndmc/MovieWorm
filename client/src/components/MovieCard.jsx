@@ -34,7 +34,6 @@ const MovieCard = (props) => {
 
   return (
     <>
-      <h2>I'm a movie card</h2>
       {cards}
     </>
   );

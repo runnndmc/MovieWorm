@@ -17,7 +17,7 @@ const Layout = (props) => {
       <div className="all-movies">
         {currentUser && (
           <>
-            <Link to="/movies">Movies</Link>
+            <Link className='show-all-movies' to="/movies">Movies</Link>
           </>
         )}
       </div>
@@ -25,7 +25,11 @@ const Layout = (props) => {
       <div className="add-new-movie">
         {currentUser && (
           <>
-            <Link to="/movies/add">Add New Movie</Link>
+            <Link className='add-movie-main'to="/movies/add">
+              <div className='add-movie-main'>Add
+                <br></br>New
+                <br></br>Movie
+              </div></Link>
           </>
         )}
       </div>

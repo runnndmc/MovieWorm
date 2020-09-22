@@ -12,6 +12,7 @@
 }
 .genre{
     font-weight: 400;
+    margin-left: 10px;
 }
 .detail-poster {
   display: block;
