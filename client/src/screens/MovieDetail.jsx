@@ -21,10 +21,10 @@ useEffect (() => {
 const matchAndShowReview = reviews.map(review => {
     if (review.movie_id === Number(id)){
         return (
-            <>
+            <div className='review-details'>
             <p>{review.summary}</p>
             <p>You gave this {review.star_rating}<FaStar size={15}/></p>
-            </>
+            </div>
         )
     } 
 })
@@ -71,8 +71,10 @@ const handleClick = async () => {
                 </>
             }
             {matchAndShowReview}
-            <Link to={`/movies/${id}/edit`}><button>Edit</button></Link>
-            <button onClick={() => handleDelete(id)}>Delete</button>
+            <div className='edit-delete-buttons'>
+                <Link to={`/movies/${id}/edit`}><button className='edit-link'>Edit</button></Link>
+                <button className='delete-button'onClick={() => handleDelete(id)}>Delete</button>
+            </div>
         </div>
     )
 }
