@@ -77,7 +77,6 @@ const MovieCreate = (props) => {
     )
 })
 
-
   return (
     <form
         onSubmit={(e) => {
@@ -145,16 +144,15 @@ const MovieCreate = (props) => {
         </div>
         <div className="creave-review-form">
         <h2>Create You're Review</h2>
-        {starRate}
-        
-            <label>Review</label>
-            <textarea
-                name='summary'
-                value={summary}
-                cols='10'
-                rows='3'
-                onChange={handleReviewChange}
-            ></textarea>
+        {starRate}        
+        <label>Review</label>
+        <textarea
+            name='summary'
+            value={summary}
+            cols='10'
+            rows='3'
+            onChange={handleReviewChange}
+        ></textarea>
         <button>Submit</button>
         </div>
     </form>
