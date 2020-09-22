@@ -5,7 +5,7 @@
     justify-content: flex-start;
     width: 50vw;
     border-radius: 5px;
-    background-color: pink;
+    background-color: #C1BDB3;
     padding: 20px;
     align-content: center;
     margin: 0 auto;
@@ -26,7 +26,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
-
 }
 .write-review{
     padding: 12px 12px 12px 0;
@@ -50,8 +49,8 @@ textarea{
     background-color: lightslategray;
    
 }
-.radio-buttons{
-    display:none;
+input[type="radio"]{
+    display: none;
 }
 .create-submit{
     width: 200px;

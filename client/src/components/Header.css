@@ -1,13 +1,10 @@
 header{
     display: grid;
     box-sizing: border-box;
-    
 } 
-
 .app-name{
     margin-top: 0;
 }
-
 .logo-tag{
     display: flex;
     flex-direction: column;
@@ -33,7 +30,7 @@ header{
 }
 
 .log-in-fo{
-    font-size: 35px;
+    font-size: 25px;
     grid-column-start:4;
     display: flex;
     justify-content: space-around;
@@ -43,7 +40,7 @@ header{
 }
 
 .find-your-movies{
-    background-color: cyan;
+
     display: grid;
 
     grid-template-columns: repeat(4, 1fr);

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FaStar } from 'react-icons/fa'
 import { useParams, Link } from 'react-router-dom'
+
 import { getOneMovie } from '../services/movies'
 import './MovieDetail.css'
 

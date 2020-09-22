@@ -3,7 +3,7 @@ import { FaStar } from 'react-icons/fa'
 import './MovieCreate.css'
 
 const MovieCreate = (props) => {
-    const {createSubmit, createReviewSubmit} = props; /*from MainContainer with createReviewSubmit>postReview() and fetchReviews>getAllReviews()*/
+    const {createSubmit, createReviewSubmit,} = props; /*from MainContainer with createReviewSubmit>postReview() and fetchReviews>getAllReviews()*/
     const [formData, setFormData] = useState({
         title: "",
         director: "",
@@ -31,7 +31,7 @@ const MovieCreate = (props) => {
     })
     const {
         summary, 
-        star_rating,
+        star_rating
     }=reviewForm
 
 
