@@ -33,9 +33,9 @@ const MovieCard = (props) => {
 
 
   return (
-    <>
+    <div className='card-container'>
       {cards}
-    </>
+    </div>
   );
 };
 

@@ -84,7 +84,7 @@ const MovieCreate = (props) => {
         createSubmit(formData, reviewForm)
     }}>
         <div className='create-movie-form'>
-        <h2>Create You're Movie</h2>
+        <h2>I Just Watched: </h2>
         <label>Title:</label>
         <input
             name='title'

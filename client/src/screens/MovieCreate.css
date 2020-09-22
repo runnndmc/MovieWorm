@@ -1,11 +1,26 @@
 
 .create-movie-form{
-    background-color: maroon;
     display: flex;
     flex-direction:column;
+    justify-content: flex-start;
+    width: 50vw;
+    border-radius: 5px;
+    background-color: pink;
+    padding: 20px;
+    align-content: center;
+    margin: 0 auto;
 }
-
-
+.create-movie-form input{
+    padding: 7px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.create-movie-form label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    float: left;
+    font-weight: 600;
+  }
 .creave-review-form{
     display: flex;
 }

@@ -11,8 +11,13 @@
 }
 
 .movie-card-image{
-    width: 30vw;
+    width: 40vw;
 }
 .break{
     word-break: break-all;
+}
+.card-container{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
 }
