@@ -4,6 +4,7 @@ import MovieCard from '../components/MovieCard';
 import Search from '../components/Search';
 import Movie from '../components/Movie';
 import '../shared/Layout.css'
+import './AllMovies.css'
 
 const AllMovies = (props) => {
     const {currentUser, movies, handleDelete, reviews} = props
@@ -18,7 +19,7 @@ const AllMovies = (props) => {
     const handleSubmit = (e) => e.preventDefault()
 
     const moviesFound = searchMovies.map((movie, index) => 
-        <Movie _id={movie._id} name={movie.title} imgUrl={movie.img_url} key={index} movies={movies}/>)
+        <Movie id={movie.id} name={movie.title} imgUrl={movie.img_url} key={index} movies={movies}/>)
 
 
 

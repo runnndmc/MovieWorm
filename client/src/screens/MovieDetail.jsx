@@ -51,7 +51,7 @@ const handleClick = async () => {
                 movie &&
                 <>
                     <div className='movie-top-info'>
-                        <h3>{movie.genre}</h3>
+                        <h3 className='genre'>{movie.genre}</h3>
                         <h3 className='year'>{movie.year_released}</h3>
                     </div>
                     <img className='detail-poster' src={movie.img_url} height='500px' alt={movie.name}/>    
