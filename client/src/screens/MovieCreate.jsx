@@ -3,7 +3,7 @@ import { FaStar } from 'react-icons/fa'
 import './MovieCreate.css'
 
 const MovieCreate = (props) => {
-    const {createSubmit, createReviewSubmit} = props; /*from MainContainer with createReviewSubmit>postReview() and fetchReviews>getAllReviews()*/
+    const {createSubmit, createReviewSubmit,} = props; /*from MainContainer with createReviewSubmit>postReview() and fetchReviews>getAllReviews()*/
     const [formData, setFormData] = useState({
         title: "",
         director: "",
@@ -31,7 +31,7 @@ const MovieCreate = (props) => {
     })
     const {
         summary, 
-        star_rating,
+        star_rating
     }=reviewForm
 
 
@@ -57,7 +57,7 @@ const MovieCreate = (props) => {
   const starRate=[...Array(5)].map((star, i) => {
     const ratingValue = i + 1
     return ( 
-    <label className='star-rating'>
+    <>
         <input 
             className='radio-buttons'
             type='radio' 
@@ -68,15 +68,14 @@ const MovieCreate = (props) => {
         />
         <FaStar 
             className='star' 
-            color={ratingValue <= (hover ||star_rating) ? 'green' : 'gray'} 
-            size={50}
+            color={ratingValue <= (hover ||star_rating) ? '#CEFF1A' : 'gray'} 
+            size={40}
             onMouseEnter={()=>setHover(ratingValue)}
             onMouseLeave={()=>setHover(null)}
         />
-    </label>
+    </>
     )
 })
-
 
   return (
     <form
@@ -85,7 +84,7 @@ const MovieCreate = (props) => {
         createSubmit(formData, reviewForm)
     }}>
         <div className='create-movie-form'>
-        <h2>Create You're Movie</h2>
+        <h2>I Just Watched: </h2>
         <label>Title:</label>
         <input
             name='title'
@@ -143,22 +142,27 @@ const MovieCreate = (props) => {
             onChange={handleChange}
         />
         </div>
-        <div className="creave-review-form">
-        <h2>Create You're Review</h2>
-        {starRate}
-        
-            <label>Review</label>
-            <textarea
-                name='summary'
-                value={summary}
-                cols='10'
-                rows='3'
-                onChange={handleReviewChange}
-            ></textarea>
-        <button>Submit</button>
+        <div className="create-review-form">
+        <h2 className='review-label'>What'd Ya Think?</h2>
+        <div className='star-click'>
+            {starRate}
+        </div>        
+        <label className='write-review'>Review</label>
+        <textarea
+            name='summary'
+            value={summary}
+            cols='10'
+            rows='3'
+            onChange={handleReviewChange}
+        ></textarea>
+        <button className='create-submit'>Submit</button>
         </div>
     </form>
   );
 };
 
 export default MovieCreate;
+
+
+/*==== CITED =====*/
+//https://www.youtube.com/watch?v=eDw46GYAIDQ

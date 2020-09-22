@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
+
 import MovieCreate from "../screens/MovieCreate";
 import MovieDetail from "../screens/MovieDetail";
 import AllMovies from "../screens/AllMovies";
@@ -7,6 +8,7 @@ import MovieEdit from "../screens/MovieEdit";
 
 import { deleteMovie, getAllMovies, postMovie, putMovie } from "../services/movies";
 import { postReview, getAllReviews } from "../services/reviews";
+
 
 
 
@@ -70,7 +72,6 @@ const MainContainer = (props) => {
 
   return (
     <Switch>
-
       <Route path="/movies/add">
         <MovieCreate 
           createSubmit={createSubmit} 

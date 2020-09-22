@@ -1,0 +1,77 @@
+.movie-top-info {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 70%;
+  box-sizing: border-box;
+}
+.year {
+  word-break: break-all;
+  line-height: 1;
+  width: 1em;
+  align-self: flex-end;
+  font-weight: 400;
+}
+.genre{
+    font-weight: 400;
+    margin-left: 10px;
+}
+.detail-poster {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.detail-title {
+  margin-left: 30px;
+  font-size: 50px;
+}
+.movie-details {
+  display: flex;
+  border-bottom: 2px solid black;
+  height: 37px;
+  justify-content: space-between;
+  width: 60vw;
+  align-items: center;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+.review-details {
+  display: flex;
+  width: 57vw;
+  border: 2px solid black;
+  align-items: center;
+  margin-left: 30px;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 12px;
+}
+.edit-delete-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px;
+}
+.delete-button,.edit-link{
+  padding: 0.5em 3em;
+  border: 0.1em solid black;
+  margin: 0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #0c0c0c;
+  text-align: center;
+  transition: all 0.15s;
+}
+.edit-link:hover{
+    color:#DDDDDD;
+    border-color:#DDDDDD;
+}
+.delete-button:hover{
+    color:#DDDDDD;
+    border-color:#DDDDDD;
+}
+
+
+
+/*==== CITED =====*/
+/* https://fdossena.com/?p=html5cool/buttons/i.frag */

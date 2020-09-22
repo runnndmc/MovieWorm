@@ -11,7 +11,7 @@ const Header = (props) => {
 
         <header>
             <div className='logo-tag'>
-                <Link to='/'><h1>MovieWorm</h1></Link>
+                <Link className='logo' to='/'><h1 className='logo-main'>MovieWorm</h1></Link>
                
                 <h4 className='tag'>for those devoted</h4>
             </div>
@@ -19,7 +19,7 @@ const Header = (props) => {
                 currentUser ?
                     <div className='log-in-fo'> 
                         <p>{currentUser.username}</p>
-                        <button onClick={handleLogout}>Log Out</button>
+                        <button className='log-out'onClick={handleLogout}>Log Out</button>
                     </div> :
                     <div className='log-in-fo'>
                     <Link to='/login'>Login/Register</Link>

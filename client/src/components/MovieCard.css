@@ -1,18 +1,93 @@
 
 .movie-card{
-    background-color: darkmagenta;
+    background-color: whitesmoke;
     width:40vw;
-    padding: 0 20px;
+    padding: 0 30px;
     display:flex;
     flex-direction: row; 
     flex-wrap: wrap;
     align-items: center;
     margin: 10px;   
+    border: 2px solid black;
 }
-
+.card{
+    text-decoration: none;
+    color: black;
+}
+.detail-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2px solid black;
+    height: 37px;
+    align-items: center;
+}
+.movie-value{
+    font-size: 30px;
+}
 .movie-card-image{
-    width: 30vw;
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+}
+.movie-value-genre{
+    border: none;
+    font-size: 30px;
 }
 .break{
+    margin-top: 5px;
     word-break: break-all;
+    font-size: 35px;
 }
+.card-container{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+}
+.genre-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 37px;
+    align-items: center;
+}
+
+@media all and (max-width: 800px) and (min-width: 700px) {
+    .movie-card{
+        width: 40vw;
+    }
+    .break{
+        font-size: 25px;
+    }
+    .detail-section{
+        font-size: 10px;
+        width: 35vw;
+        align-content: center;
+        align-items: center;
+    }
+    .movie-value{
+        font-size: 19px;
+    }
+}
+
+@media all and (max-width: 699px) and (min-width: 520px) {
+    .movie-card{
+        width: 30vw;
+        margin-right: 10px;
+        padding: 40px;
+    }
+
+    .break{
+        font-size: 25px;
+    }
+    .detail-section{
+        font-size: 10px;
+        width: 35vw;
+        align-content: center;
+        align-items: center;
+    }
+    .movie-value{
+        font-size: 15px;
+    }
+}
+

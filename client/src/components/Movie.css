@@ -1,0 +1,10 @@
+.movie{
+    margin: 10px;
+    transition: 250ms all;
+    padding: 20px;
+    margin-bottom: 60px; 
+    
+}
+.search-image{
+    width: 200px;
+}

@@ -1,0 +1,18 @@
+.search-res{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+.total-table{
+    
+    display: flex;
+    border-bottom: 2px solid black;
+    height: 37px;
+    justify-content: space-between;
+    width: 20vw;
+    align-items: center;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+

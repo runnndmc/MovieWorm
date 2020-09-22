@@ -2,13 +2,13 @@
 .body-container{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(208, 204, 211);
+    background-color:whitesmoke;
     display: grid;
-    grid-template-columns: 1fr 1fr 30px;
-    grid-template-rows: 150px 1fr 1fr 1fr;
-    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr .5fr .5fr;
+    grid-template-rows: 150px 1fr 1fr 1fr 1fr;
+    grid-gap: .1em;
 
-    padding: 5px;
+    padding: 2px;
     box-sizing: border-box;
 }
 header{
@@ -16,36 +16,80 @@ header{
     grid-row-end: 1;
     grid-column-start: 1;
     grid-column-end: 4;
-    background-color: darkblue;
+    background-color:#C1BDB3;
 }
 .right-side{
     grid-column: 5;
     grid-row-start: 1;
     grid-row-end: 3;
-    background-color: deeppink;
     padding:10px;
     border:1px solid black
 }
 .all-movies{
-    background-color: lawngreen;  
+    background-color: #CEFF1A;  
     grid-column-start: 5;
     grid-row-start: 1;
-    grid-row-end: 5;                                         ;
+    grid-row-end: 5;                                         
+}
+.show-all-movies{
+    text-decoration: none;
+    position: sticky;
+    top:0;
+    padding-top: 17px;
+    margin-left: 30px;
+    font-weight: 700;
 }
 .add-new-movie{
-    background-color: lightpink;
+    background-color: #1B4332;
     grid-column-start: 4;
     grid-row-start: 1;
     grid-row-end: 5;
 }
+.add-movie-main{
+    text-decoration: none;
+    position: sticky;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
 main{
     grid-row-start: 2;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: span 3;
-    background-color: coral;
+    background-color: #C1BDB3;
 }
 footer{
     grid-row-start: 4;
-    background-color: deepskyblue;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    background-color: #C1BDB3;
 }
+
+@media all and (max-width: 800px) and (min-width: 700px) {
+
+        .show-all-movies{
+            margin-left: 10px;
+        }
+        .add-movie-main{
+            margin-right: 10px;
+        }
+}
+
+@media all and (max-width: 699px) and (min-width: 520px) {
+    main{
+    background-color: black;
+    }
+    .add-movie-main{
+        margin-right: 10px;
+    }
+    .show-all-movies{
+        margin-left: 10px;
+    }
+}
+
