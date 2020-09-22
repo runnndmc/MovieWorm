@@ -52,6 +52,24 @@
     align-items: center;
 }
 
+@media all and (max-width: 800px) and (min-width: 700px) {
+    .movie-card{
+        width: 40vw;
+    }
+    .break{
+        font-size: 25px;
+    }
+    .detail-section{
+        font-size: 10px;
+        width: 35vw;
+        align-content: center;
+        align-items: center;
+    }
+    .movie-value{
+        font-size: 19px;
+    }
+}
+
 @media all and (max-width: 699px) and (min-width: 520px) {
     .movie-card{
         width: 30vw;
@@ -69,6 +87,7 @@
         align-items: center;
     }
     .movie-value{
-        font-size: 19px;
+        font-size: 15px;
     }
 }
+

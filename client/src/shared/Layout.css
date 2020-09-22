@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr .5fr .5fr;
     grid-template-rows: 150px 1fr 1fr 1fr;
-    grid-gap: .5em;
+    grid-gap: .2em;
 
     padding: 2px;
     box-sizing: border-box;
@@ -72,6 +72,18 @@ footer{
     background-color: deepskyblue;
 }
 
+@media all and (max-width: 800px) and (min-width: 700px) {
+    main{
+        background-color: red;
+        }
+        .show-all-movies{
+            margin-left: 10px;
+        }
+        .add-movie-main{
+            margin-right: 10px;
+        }
+}
+
 @media all and (max-width: 699px) and (min-width: 520px) {
     main{
     background-color: black;
@@ -83,3 +95,4 @@ footer{
         margin-left: 10px;
     }
 }
+

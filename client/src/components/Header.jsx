@@ -19,7 +19,7 @@ const Header = (props) => {
                 currentUser ?
                     <div className='log-in-fo'> 
                         <p>{currentUser.username}</p>
-                        <button onClick={handleLogout}>Log Out</button>
+                        <button className='log-out'onClick={handleLogout}>Log Out</button>
                     </div> :
                     <div className='log-in-fo'>
                     <Link to='/login'>Login/Register</Link>

@@ -1,8 +1,7 @@
 header{
     display: grid;
     box-sizing: border-box;
-    grid-column-start: 1;
-    grid-column-end: 5;
+    
 } 
 
 .app-name{
@@ -34,13 +33,13 @@ header{
 }
 
 .log-in-fo{
-    background-color: cornflowerblue;
+    font-size: 35px;
     grid-column-start:4;
     display: flex;
     justify-content: space-around;
     height: 50px;
-    align-items: baseline;
-    margin-top: 100px;
+    align-items: center;
+    margin-top: 10%;
 }
 
 .find-your-movies{
@@ -54,10 +53,42 @@ header{
     grid-row-end: span 5;
     
 }
+.log-out{
+    width: 100px;
+    padding: 0.5em 3em;
+    border: 0.1em solid black;
+    margin: 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #0c0c0c;
+    text-align: center;
+    transition: all 0.15s;
+}
+.log-out:hover{
+    color:#DDDDDD;
+    border-color:#DDDDDD;
+}
 
+@media all and (max-width: 800px) and (min-width: 700px) {
+    .logo{
+        font-size: 30px;
+        height: 70px;
+    }
+    .log-out{
+        width: 100px;
+    }
+}
 @media all and (max-width: 699px) and (min-width: 520px) {
     .logo{
     font-size: 25px;
     height: 65px;
     }
+    .log-out{
+        width: 70px;
+    }
+    .log-in-fo{
+        flex-wrap: row wrap;
+    }   
 }
