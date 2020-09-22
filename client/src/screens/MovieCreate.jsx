@@ -57,7 +57,7 @@ const MovieCreate = (props) => {
   const starRate=[...Array(5)].map((star, i) => {
     const ratingValue = i + 1
     return ( 
-    <label className='star-rating'>
+    <>
         <input 
             className='radio-buttons'
             type='radio' 
@@ -68,12 +68,12 @@ const MovieCreate = (props) => {
         />
         <FaStar 
             className='star' 
-            color={ratingValue <= (hover ||star_rating) ? 'green' : 'gray'} 
-            size={50}
+            color={ratingValue <= (hover ||star_rating) ? '#CEFF1A' : 'gray'} 
+            size={40}
             onMouseEnter={()=>setHover(ratingValue)}
             onMouseLeave={()=>setHover(null)}
         />
-    </label>
+    </>
     )
 })
 
@@ -142,10 +142,12 @@ const MovieCreate = (props) => {
             onChange={handleChange}
         />
         </div>
-        <div className="creave-review-form">
-        <h2>Create You're Review</h2>
-        {starRate}        
-        <label>Review</label>
+        <div className="create-review-form">
+        <h2 className='review-label'>What'd Ya Think?</h2>
+        <div className='star-click'>
+            {starRate}
+        </div>        
+        <label className='write-review'>Review</label>
         <textarea
             name='summary'
             value={summary}
@@ -153,7 +155,7 @@ const MovieCreate = (props) => {
             rows='3'
             onChange={handleReviewChange}
         ></textarea>
-        <button>Submit</button>
+        <button className='create-submit'>Submit</button>
         </div>
     </form>
   );
