@@ -19,7 +19,7 @@
 
 ## Overview
 
-_**MovieWorm** is a movie journal app helping you to remember what movie's you've watched and what you thought about them, all in one place. MovieWorm is for the dedicated move watcher who wants to dive deep into the details of who directed it, what the movie was about or even what rating they would give it.
+**MovieWorm** is a movie journal app helping you to remember what movie's you've watched and what you thought about them, all in one place. MovieWorm is for the dedicated move watcher who wants to dive deep into the details of who directed it, what the movie was about or even what rating they would give it.
 
 <br>
 
@@ -111,39 +111,18 @@ src
 | Add Controllers    |    H     |     2 hrs      |   2   hrs     |    1    |
 | Set up routes |    H     |     1 hrs      |   1   hrs     |     1     |
 | Set up user auth    |    H     |     2 hrs      |   2   hrs     |    1    |
-| Create React App and file structure |    H     |     2 hrs      |      hrs     |     TBD     |
 | Set up App.js and all Screens react sturcture  |    H     |     2 hrs      |      hrs     |    TBD    |
 | Set up User Auth |    H     |     3 hrs      |      hrs     |     TBD     |
-| Finish Layout with Header component|    H     |     3 hrs      |      hrs     |     TBD     |
-| 1stDraft Style Layout screen |    H     |     3 hrs      |      hrs     |     TBD     |
-| Create Home screen |    H     |     3 hrs      |      hrs     |     TBD     |
-| 1stDraft Style Home screen |    H     |     2 hrs      |      hrs     |     TBD     |
-| Create GET api call |    H     |     1 hrs      |      hrs     |     TBD     |
+| Layout with Header component|    H     |     3 hrs      |      hrs     |     TBD     |
 | Create MovieCard component |    H     |     3 hrs      |      hrs     |     TBD     |
-| 1stDraft Style MovieCard component |    H     |     2 hrs      |      hrs     |     TBD     |
-| Media Queries |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create CreateForm |    H     |     2 hrs      |      hrs     |     TBD     |
-| 1stDraft Style CreateForm |    H     |     3 hrs      |      hrs     |     TBD     |
 | Create Login/Register screens |    H     |     3 hrs      |      hrs     |     TBD     |
-| 1stDraft Style Login/Register screens |    H     |     3 hrs      |      hrs     |     TBD     |
-| Media Queries |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create MovieDetail screen |    H     |     3 hrs      |      hrs     |     TBD     |
-| 1stDraft Style MovieDetail screen |    H     |     2 hrs      |      hrs     |     TBD     |
-| Create PUT api call |    H     |     3 hrs      |      hrs     |     TBD     |
-| 1stDraft Style Edit Review inline |    H     |     2 hrs      |      hrs     |     TBD     |
 | Create DELETE api call |    H     |     3 hrs      |      hrs     |     TBD     |
-| Make sure it's functioning |    H     |     1 hrs      |      hrs     |     TBD     |
-| Media Queries |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create ReviewCreate screen |    H     |     3 hrs      |      hrs     |     TBD     |
-| 1stDraft Style ReviewCreate screen |    H     |     2 hrs      |      hrs     |     TBD     |
-| Media Queries |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create HeaderTable compomnent |    L     |     3 hrs      |      hrs     |     TBD     |
-| 1stDraft Style HeaderTable compomnent |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create RatingBubbles compomnent |    L     |     2 hrs      |      hrs     |     TBD     |
-| 1stDraft Style RatingBubbles compomnent |    L     |     1 hrs      |      hrs     |     TBD     |
 | Create RatingBubbles compomnent |    L     |     2 hrs      |      hrs     |     TBD     |
-| 1stDraft Style RatingBubbles compomnent |    L     |     1 hrs      |      hrs     |     TBD     |
-| Media Queries |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create Sort fucntionality |    L     |     2 hrs      |      hrs     |     TBD     |
 | Create Search fucntionality |    L     |     2 hrs      |      hrs     |     TBD     |
 | Finalize CSS |    H     |     4hrs      |      hrs     |     TBD     |
