@@ -154,6 +154,8 @@ src
 ## Code Showcase
 - _She may be small but I'm proud of this code because I was able to come up with how to do it and how to debug is all on my own 
 
+``` structure
+
 const matchAndShowReview = reviews.map(review => {
     if (review.movie_id === Number(id)){
         return (
@@ -164,7 +166,7 @@ const matchAndShowReview = reviews.map(review => {
         )the 
     } 
 })
-
+```
 ## Code Issues & Resolutions
 
 - _The above code I came up with when trying to map out reviews from a seperate table that included the movie_id. Originally it was not running because the review.movie_id was an integer and the id was a string so I used Number in order to convert it. 
