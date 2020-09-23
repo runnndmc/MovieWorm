@@ -163,7 +163,7 @@ const matchAndShowReview = reviews.map(review => {
             <p>{review.summary}</p>
             <p>You gave this {review.star_rating}<FaStar size={15}/></p>
             </div>
-        )the 
+        ) 
     } 
 })
 ```
