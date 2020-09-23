@@ -106,28 +106,26 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create backend models    |    H     |     1 hr      |   1   hrs     |   3     |
-| Create database |    H     |     3 hrs      |     3 hrs     |     1     |
-| Add Controllers    |    H     |     2 hrs      |   2   hrs     |    1    |
-| Set up routes |    H     |     1 hrs      |   1   hrs     |     1     |
-| Set up user auth    |    H     |     2 hrs      |   2   hrs     |    1    |
-| Set up App.js and all Screens react sturcture  |    H     |     2 hrs      |      hrs     |    TBD    |
-| Set up User Auth |    H     |     3 hrs      |      hrs     |     TBD     |
-| Layout with Header component|    H     |     3 hrs      |      hrs     |     TBD     |
-| Create MovieCard component |    H     |     3 hrs      |      hrs     |     TBD     |
-| Create CreateForm |    H     |     2 hrs      |      hrs     |     TBD     |
-| Create Login/Register screens |    H     |     3 hrs      |      hrs     |     TBD     |
-| Create MovieDetail screen |    H     |     3 hrs      |      hrs     |     TBD     |
-| Create DELETE api call |    H     |     3 hrs      |      hrs     |     TBD     |
-| Create ReviewCreate screen |    H     |     3 hrs      |      hrs     |     TBD     |
-| Create HeaderTable compomnent |    L     |     3 hrs      |      hrs     |     TBD     |
-| Create RatingBubbles compomnent |    L     |     2 hrs      |      hrs     |     TBD     |
-| Create RatingBubbles compomnent |    L     |     2 hrs      |      hrs     |     TBD     |
-| Create Sort fucntionality |    L     |     2 hrs      |      hrs     |     TBD     |
-| Create Search fucntionality |    L     |     2 hrs      |      hrs     |     TBD     |
-| Finalize CSS |    H     |     4hrs      |      hrs     |     TBD     |
-| Media Queries |    L     |     3 hrs      |      hrs     |     TBD     |
-| TOTAL               |          |     95 hrs      |      hrs     |     TBD     |
+| Create backend models    |    H     |     1 hr      |   1   hrs     |   3hr     |
+| Create database |    H     |     3 hrs      |     3 hrs     |     1hr    |
+| Add Controllers    |    H     |     2 hrs      |   2   hrs     |    1hr    |
+| Set up routes |    H     |     1 hrs      |   1   hrs     |     1hr     |
+| Set up user auth    |    H     |     2 hrs      |   2   hrs     |    1hr    |
+| Set up App.js and all Screens react sturcture  |    H     |     2 hrs      |     2hrs     |    1hr    |
+| Set up User Auth |    H     |     3 hrs      |      3hrs     |     5hrs    |
+| Layout with Header component|    H     |     3 hrs      |      3hrs     |     4hrs     |
+| Create MovieCard component |    H     |     3 hrs      |      3hrs     |     .5hrs    |
+| Create CreateForm |    H     |     2 hrs      |      2hrs     |     3hrs     |
+| Create Login/Register screens |    H     |     3 hrs      |      3hrs     |     2hrs     |
+| Create MovieDetail screen |    H     |     3 hrs      |      3hrs     |     1hr     |
+| Create ReviewCreate screen |    H     |     3 hrs      |      3hrs     |     3hrs     |
+| Create HeaderTable compomnent |    L     |     3 hrs      |      3hrs     |     1hr    |
+| Create RatingBubbles compomnent |    L     |     2 hrs      |      1hrs     |     1hr     |
+| Create Sort fucntionality |    L     |     2 hrs      |      2hrs     |     -    |
+| Create Search fucntionality |    L     |     2 hrs      |      hrs     |     2hrs     |
+| Finalize CSS |    H     |     4hrs      |      4hrs     |     6hrs     |
+| Media Queries |    L     |     3 hrs      |      3hrs     |     1hr     |
+| TOTAL               |          |     42 hrs      |    42hrs     |     38.5hrs   |
 
 <br>
 
@@ -154,6 +152,19 @@ src
 ***
 
 ## Code Showcase
+- _She may be small but I'm proud of this code because I was able to come up with how to do it and how to debug is all on my own 
 
+const matchAndShowReview = reviews.map(review => {
+    if (review.movie_id === Number(id)){
+        return (
+            <div className='review-details'>
+            <p>{review.summary}</p>
+            <p>You gave this {review.star_rating}<FaStar size={15}/></p>
+            </div>
+        )the 
+    } 
+})
 
 ## Code Issues & Resolutions
+
+- _The above code I came up with when trying to map out reviews from a seperate table that included the movie_id. Originally it was not running because the review.movie_id was an integer and the id was a string so I used Number in order to convert it. 
