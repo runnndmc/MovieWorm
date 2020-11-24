@@ -34,7 +34,10 @@ const Layout = (props) => {
 
       <main>{props.children}</main>
       <footer>
-        <h2>Dayna Marie</h2>
+        <h2 className='built'>Built by: Dayna Marie</h2>
+        <a href="https://github.com/runnndmc">
+          <img className="github" src="./github.png" alt="github logo"/>
+        </a>
       </footer>
     </div>
   );
