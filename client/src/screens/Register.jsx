@@ -53,7 +53,7 @@ const Register = (props) => {
                 onChange={handleChange}
             />
          <div className='button-conatiner'>
-         <button className='register-submit'>Submit</button>
+            <button className='register-submit'>Submit</button>
          </div>
         
         </form>

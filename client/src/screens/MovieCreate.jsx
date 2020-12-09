@@ -1,167 +1,154 @@
 import React, { useState } from "react";
-import { FaStar } from 'react-icons/fa'
-import './MovieCreate.css'
+import { FaStar } from "react-icons/fa";
+import "./MovieCreate.css";
 
 const MovieCreate = (props) => {
-    const {createSubmit, createReviewSubmit,} = props; /*from MainContainer with createReviewSubmit>postReview() and fetchReviews>getAllReviews()*/
-    const [formData, setFormData] = useState({
-        title: "",
-        director: "",
-        producer: "",
-        writer: "",
-        screenplay_by: "",
-        year_released: "",
-        genre: "",
-        img_url: "",
-    });
-    const {
-        title,
-        director,
-        producer,
-        writer,
-        screenplay_by,
-        year_released,
-        genre,
-        img_url,
-    }=formData;
+  const {
+    createSubmit,
+    createReviewSubmit,
+  } = props; /*from MainContainer with createReviewSubmit>postReview() and fetchReviews>getAllReviews()*/
+  const [formData, setFormData] = useState({
+    title: "",
+    director: "",
+    producer: "",
+    writer: "",
+    screenplay_by: "",
+    year_released: "",
+    genre: "",
+    img_url: "",
+  });
+  const {
+    title,
+    director,
+    producer,
+    writer,
+    screenplay_by,
+    year_released,
+    genre,
+    img_url,
+  } = formData;
 
-    const [reviewForm, setReviewForm] = useState({
-        summary: "", 
-        star_rating: "",
-    })
-    const {
-        summary, 
-        star_rating
-    }=reviewForm
+  const [reviewForm, setReviewForm] = useState({
+    summary: "",
+    star_rating: "",
+  });
+  const { summary, star_rating } = reviewForm;
 
-    const [hover, setHover] = useState(null)
+  const [hover, setHover] = useState(null);
 
-    const handleChange = (e) => {
-        const {value, name} = e.target
-        setFormData(prevState => ({
-            ...prevState,
-            [name]:value
-        }))
-    }
+  const handleChange = (e) => {
+    const { value, name } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
-  const handleReviewChange=(e)=>{
-      const {value, name} = e.target
-      setReviewForm(prevState=> ({
-          ...prevState,
-          [name]:value
-      }))
-  }
+  const handleReviewChange = (e) => {
+    const { value, name } = e.target;
+    setReviewForm((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
-  const starRate=[...Array(5)].map((star, i) => {
-    const ratingValue = i + 1
-    return ( 
-    <label>
-        <input 
-            className='radio-buttons'
-            type='radio' 
-            name='star_rating'
-            value={ratingValue}
-            onClick={()=>setReviewForm(ratingValue)}
-            onChange={handleReviewChange}
+  const starRate = [...Array(5)].map((star, i) => {
+    const ratingValue = i + 1;
+    return (
+      <label>
+        <input
+          className="radio-buttons"
+          type="radio"
+          name="star_rating"
+          value={ratingValue}
+          onClick={() => setReviewForm(ratingValue)}
+          onChange={handleReviewChange}
         />
-        <FaStar 
-            className='star' 
-            color={ratingValue <= (hover || star_rating) ? '#CEFF1A' : 'gray'} 
-            size={40}
-            onMouseEnter={()=>setHover(ratingValue)}
-            onClick={()=>setReviewForm(ratingValue)}
-            onMouseLeave={()=>setHover(null)}
+        <FaStar
+          className="star"
+          color={ratingValue <= (hover || star_rating) ? "#CEFF1A" : "gray"}
+          size={40}
+          onMouseEnter={() => setHover(ratingValue)}
+          onMouseLeave={() => setHover(null)}
         />
-    </label>
-    )
-})
+      </label>
+    );
+  });
 
   return (
     <form
-        onSubmit={(e) => {
-        e.preventDefault()
-        createSubmit(formData, reviewForm)
-    }}>
-        <div className='create-movie-form'>
+      onSubmit={(e) => {
+        e.preventDefault();
+        createSubmit(formData, reviewForm);
+      }}
+    >
+      <div className="create-movie-form">
         <h2>I Just Watched: </h2>
         <label>Title:</label>
-        <input
-            name='title'
-            type='text'
-            value={title}
-            onChange={handleChange}
-        />
+        <input name="title" type="text" value={title} onChange={handleChange} />
         <label>Director:</label>
         <input
-            name='director'
-            type='text'
-            value={director}
-            onChange={handleChange}
+          name="director"
+          type="text"
+          value={director}
+          onChange={handleChange}
         />
         <label>Producer:</label>
         <input
-            name='producer'
-            type='text'
-            value={producer}
-            onChange={handleChange}
+          name="producer"
+          type="text"
+          value={producer}
+          onChange={handleChange}
         />
         <label>Writer:</label>
-        <input 
-            name='writer'
-            type='text'
-            value={writer}
-            onChange={handleChange}
+        <input
+          name="writer"
+          type="text"
+          value={writer}
+          onChange={handleChange}
         />
         <label>Screenplay By:</label>
-        <input 
-            name='screenplay_by'
-            type='text'
-            value={screenplay_by}
-            onChange={handleChange}
+        <input
+          name="screenplay_by"
+          type="text"
+          value={screenplay_by}
+          onChange={handleChange}
         />
         <label>Year Released:</label>
         <input
-            name='year_released'
-            type='number'
-            value={year_released}
-            onChange={handleChange}
+          name="year_released"
+          type="number"
+          value={year_released}
+          onChange={handleChange}
         />
         <label>Genre:</label>
-        <input
-            name='genre'
-            type='text'
-            value={genre}
-            onChange={handleChange}
-        />
+        <input name="genre" type="text" value={genre} onChange={handleChange} />
         <label>Movie Image URL</label>
         <input
-            name='img_url'
-            type='text'
-            value={img_url}
-            onChange={handleChange}
+          name="img_url"
+          type="text"
+          value={img_url}
+          onChange={handleChange}
         />
-        </div>
-        <div className="create-review-form">
-        <h2 className='review-label'>What'd Ya Think?</h2>
-        <div className='star-click'>
-        {starRate}
-        </div>        
-        <label className='write-review'>Review</label>
+      </div>
+      <div className="create-review-form">
+        <h2 className="review-label">What'd Ya Think?</h2>
+        <div className="star-click">{starRate}</div>
+        <label className="write-review">Review</label>
         <textarea
-            name='summary'
-            value={summary}
-            cols='10'
-            rows='3'
-            onChange={handleReviewChange}
+          name="summary"
+          value={summary}
+          cols="10"
+          rows="3"
+          onChange={handleReviewChange}
         ></textarea>
-        <button className='create-submit'>Submit</button>
-        </div>
+        <button className="create-submit">Submit</button>
+      </div>
     </form>
   );
 };
 
 export default MovieCreate;
-
 
 /*==== CITED =====*/
 //https://www.youtube.com/watch?v=eDw46GYAIDQ
