@@ -6,8 +6,8 @@ body{
     height: 100vh;
     background-color: #C1BDB3;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr .5fr .5fr;
-    grid-template-rows: 150px 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr .5fr;
+    grid-template-rows: 150px 1fr 1fr 1fr;
     grid-gap: .1em;
 
     padding: 2px;

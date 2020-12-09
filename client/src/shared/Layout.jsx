@@ -33,9 +33,6 @@ const Layout = (props) => {
       </div>
 
       <main>{props.children}</main>
-      <footer>
-        <h2>Dayna Marie</h2>
-      </footer>
     </div>
   );
 };
