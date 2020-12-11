@@ -41,3 +41,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jwt'
 gem 'lograge'
 gem 'lograge-sql'
+
+source 'https://rubygems.org'
+gem 'ddtrace'
+
