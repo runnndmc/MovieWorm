@@ -2,14 +2,13 @@
 require 'lograge/sql/extension'
 
 Rails.application.configure do
-    # Lograge config
-    config.lograge.enabled = true
-    config.lograge.formatter = Lograge::Formatters::Json.new
-    config.colorize_logging = false
+  config.lograge.enabled = true
 
-      config.lograge.custom_options = lambda do |event|
-        { :params => event.payload[:params],
-          :level => event.payload[:level],
-        }
+  # Generate log in JSON
+  config.lograge.formatter = Lograge::Formatters::Json.new
+  config.lograge.custom_options = lambda do |event|
+    { :ddsource => ["ruby"],
+      :params => event.payload[:params]
+    }
   end
 end
