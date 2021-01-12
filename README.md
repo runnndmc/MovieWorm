@@ -152,7 +152,7 @@ src
 ***
 
 ## Code Showcase
-- _She may be small but I'm proud of this code because I was able to come up with how to do it and how to debug is all on my own 
+- _She may be small but I'm proud of this code because I was able to come up with how to do it and debugged it all on my own 
 
 ``` structure
 
